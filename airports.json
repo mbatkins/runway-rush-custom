@@ -1,0 +1,983 @@
+[
+  {
+    "icao": "KALB",
+    "iata": "ALB",
+    "name": "Albany International Airport",
+    "city": "Albany",
+    "country": "US",
+    "aliases": [
+      "ALB",
+      "Albany",
+      "Albany International",
+      "Albany International Airport",
+      "KALB"
+    ],
+    "clue1": "Northeast U.S. capital-region airport.",
+    "clue2": "Serves New York's capital area, not New York City.",
+    "image": "assets/KALB.png"
+  },
+  {
+    "icao": "KATL",
+    "iata": "ATL",
+    "name": "Hartsfield-Jackson Atlanta International Airport",
+    "city": "Atlanta",
+    "country": "US",
+    "aliases": [
+      "ATL",
+      "Atlanta",
+      "Hartsfield",
+      "Hartsfield Jackson",
+      "Hartsfield-Jackson",
+      "Hartsfield-Jackson Atlanta International Airport",
+      "KATL"
+    ],
+    "clue1": "Major airport in the American Southeast.",
+    "clue2": "Delta\u2019s largest hub and one of the busiest airports in the world.",
+    "image": "assets/KATL.png"
+  },
+  {
+    "icao": "KAUS",
+    "iata": "AUS",
+    "name": "Austin-Bergstrom International Airport",
+    "city": "Austin",
+    "country": "US",
+    "aliases": [
+      "AUS",
+      "Austin",
+      "Austin Bergstrom",
+      "Austin-Bergstrom",
+      "Austin-Bergstrom International Airport",
+      "KAUS"
+    ],
+    "clue1": "Texas airport serving a fast-growing tech and music city.",
+    "clue2": "Named Bergstrom, this field replaced Austin\u2019s old Mueller airport.",
+    "image": "assets/KAUS.png"
+  },
+  {
+    "icao": "KBHM",
+    "iata": "BHM",
+    "name": "Birmingham-Shuttlesworth International Airport",
+    "city": "Birmingham",
+    "country": "US",
+    "aliases": [
+      "BHM",
+      "Birmingham",
+      "Birmingham Shuttlesworth",
+      "Birmingham-Shuttlesworth International Airport",
+      "KBHM",
+      "Shuttlesworth"
+    ],
+    "clue1": "Southeastern U.S. airport in Alabama.",
+    "clue2": "Named for civil rights leader Fred Shuttlesworth.",
+    "image": "assets/KBHM.png"
+  },
+  {
+    "icao": "KBNA",
+    "iata": "BNA",
+    "name": "Nashville International Airport",
+    "city": "Nashville",
+    "country": "US",
+    "aliases": [
+      "BNA",
+      "KBNA",
+      "Nashville",
+      "Nashville International",
+      "Nashville International Airport"
+    ],
+    "clue1": "Airport serving Music City.",
+    "clue2": "Its IATA code comes from the former name Berry Field Nashville.",
+    "image": "assets/KBNA.png"
+  },
+  {
+    "icao": "KBOS",
+    "iata": "BOS",
+    "name": "Boston Logan International Airport",
+    "city": "Boston",
+    "country": "US",
+    "aliases": [
+      "BOS",
+      "Boston",
+      "Boston Logan",
+      "Boston Logan International Airport",
+      "KBOS",
+      "Logan"
+    ],
+    "clue1": "Major New England airport on the water.",
+    "clue2": "Known for tight coastal approaches and a compact harbor-side layout.",
+    "image": "assets/KBOS.png"
+  },
+  {
+    "icao": "KBUF",
+    "iata": "BUF",
+    "name": "Buffalo Niagara International Airport",
+    "city": "Buffalo",
+    "country": "US",
+    "aliases": [
+      "BUF",
+      "Buffalo",
+      "Buffalo Niagara",
+      "Buffalo Niagara International Airport",
+      "KBUF"
+    ],
+    "clue1": "Airport in western New York.",
+    "clue2": "Serves the region near Niagara Falls.",
+    "image": "assets/KBUF.png"
+  },
+  {
+    "icao": "KCLE",
+    "iata": "CLE",
+    "name": "Cleveland Hopkins International Airport",
+    "city": "Cleveland",
+    "country": "US",
+    "aliases": [
+      "CLE",
+      "Cleveland",
+      "Cleveland Hopkins",
+      "Cleveland Hopkins International Airport",
+      "Hopkins",
+      "KCLE"
+    ],
+    "clue1": "Great Lakes airport in northeast Ohio.",
+    "clue2": "Historically tied to one of the earliest municipal airport systems in the U.S.",
+    "image": "assets/KCLE.png"
+  },
+  {
+    "icao": "KCLT",
+    "iata": "CLT",
+    "name": "Charlotte Douglas International Airport",
+    "city": "Charlotte",
+    "country": "US",
+    "aliases": [
+      "CLT",
+      "Charlotte",
+      "Charlotte Douglas",
+      "Charlotte Douglas International Airport",
+      "KCLT"
+    ],
+    "clue1": "Large airport in the Carolinas.",
+    "clue2": "Major American Airlines hub with a strong parallel runway pattern.",
+    "image": "assets/KCLT.png"
+  },
+  {
+    "icao": "KCVG",
+    "iata": "CVG",
+    "name": "Cincinnati/Northern Kentucky International Airport",
+    "city": "Cincinnati",
+    "country": "US",
+    "aliases": [
+      "CVG",
+      "Cincinnati",
+      "Cincinnati Northern Kentucky",
+      "Cincinnati/Northern Kentucky International Airport",
+      "KCVG",
+      "Northern Kentucky"
+    ],
+    "clue1": "Ohio Valley airport that is actually in Kentucky.",
+    "clue2": "Major cargo presence and a former Delta hub.",
+    "image": "assets/KCVG.png"
+  },
+  {
+    "icao": "KDAL",
+    "iata": "DAL",
+    "name": "Dallas Love Field",
+    "city": "Dallas",
+    "country": "US",
+    "aliases": [
+      "DAL",
+      "Dallas",
+      "Dallas Love",
+      "Dallas Love Field",
+      "KDAL",
+      "Love Field"
+    ],
+    "clue1": "Dallas airport closer to downtown than DFW.",
+    "clue2": "Strongly associated with Southwest Airlines.",
+    "image": "assets/KDAL.png"
+  },
+  {
+    "icao": "KDCA",
+    "iata": "DCA",
+    "name": "Ronald Reagan Washington National Airport",
+    "city": "Washington",
+    "country": "US",
+    "aliases": [
+      "DCA",
+      "KDCA",
+      "Reagan",
+      "Reagan National",
+      "Ronald Reagan",
+      "Ronald Reagan Washington National Airport",
+      "Washington",
+      "Washington National"
+    ],
+    "clue1": "Washington-area airport along the Potomac River.",
+    "clue2": "Famous for the river visual approach near national landmarks.",
+    "image": "assets/KDCA.png"
+  },
+  {
+    "icao": "KDEN",
+    "iata": "DEN",
+    "name": "Denver International Airport",
+    "city": "Denver",
+    "country": "US",
+    "aliases": [
+      "DEN",
+      "DIA",
+      "Denver",
+      "Denver International",
+      "Denver International Airport",
+      "KDEN"
+    ],
+    "clue1": "High-elevation airport in the Mountain West.",
+    "clue2": "Known for a huge footprint and distinctive peaked terminal roof.",
+    "image": "assets/KDEN.png"
+  },
+  {
+    "icao": "KDFW",
+    "iata": "DFW",
+    "name": "Dallas/Fort Worth International Airport",
+    "city": "Dallas-Fort Worth",
+    "country": "US",
+    "aliases": [
+      "DFW",
+      "Dallas",
+      "Dallas Fort Worth",
+      "Dallas-Fort Worth",
+      "Dallas/Fort Worth",
+      "Dallas/Fort Worth International Airport",
+      "Fort Worth",
+      "KDFW"
+    ],
+    "clue1": "Massive airport in North Texas.",
+    "clue2": "Huge parallel runway complexes between Dallas and Fort Worth.",
+    "image": "assets/KDFW.png"
+  },
+  {
+    "icao": "KDTW",
+    "iata": "DTW",
+    "name": "Detroit Metropolitan Wayne County Airport",
+    "city": "Detroit",
+    "country": "US",
+    "aliases": [
+      "DTW",
+      "Detroit",
+      "Detroit Metro",
+      "Detroit Metropolitan",
+      "Detroit Metropolitan Wayne County Airport",
+      "KDTW"
+    ],
+    "clue1": "Major airport serving southeast Michigan.",
+    "clue2": "Large Delta hub with long parallel runway geometry.",
+    "image": "assets/KDTW.png"
+  },
+  {
+    "icao": "KEWR",
+    "iata": "EWR",
+    "name": "Newark Liberty International Airport",
+    "city": "Newark",
+    "country": "US",
+    "aliases": [
+      "EWR",
+      "KEWR",
+      "Newark",
+      "Newark Liberty",
+      "Newark Liberty International Airport"
+    ],
+    "clue1": "Major New York-area airport west of Manhattan.",
+    "clue2": "United hub with compact urban runway geometry.",
+    "image": "assets/KEWR.png"
+  },
+  {
+    "icao": "KFLL",
+    "iata": "FLL",
+    "name": "Fort Lauderdale-Hollywood International Airport",
+    "city": "Fort Lauderdale",
+    "country": "US",
+    "aliases": [
+      "FLL",
+      "Fort Lauderdale",
+      "Fort Lauderdale Hollywood",
+      "Fort Lauderdale-Hollywood International Airport",
+      "KFLL"
+    ],
+    "clue1": "South Florida airport north of Miami.",
+    "clue2": "Popular gateway for cruises and leisure travel.",
+    "image": "assets/KFLL.png"
+  },
+  {
+    "icao": "KHOU",
+    "iata": "HOU",
+    "name": "William P. Hobby Airport",
+    "city": "Houston",
+    "country": "US",
+    "aliases": [
+      "HOU",
+      "Hobby",
+      "Houston",
+      "Houston Hobby",
+      "KHOU",
+      "William P Hobby",
+      "William P. Hobby Airport"
+    ],
+    "clue1": "Houston airport closer to downtown than Intercontinental.",
+    "clue2": "Major Southwest Airlines station.",
+    "image": "assets/KHOU.png"
+  },
+  {
+    "icao": "KIAD",
+    "iata": "IAD",
+    "name": "Washington Dulles International Airport",
+    "city": "Washington",
+    "country": "US",
+    "aliases": [
+      "Dulles",
+      "IAD",
+      "KIAD",
+      "Washington",
+      "Washington Dulles",
+      "Washington Dulles International Airport"
+    ],
+    "clue1": "Large Washington-area airport in northern Virginia.",
+    "clue2": "Known for its Saarinen terminal and long runway layout.",
+    "image": "assets/KIAD.png"
+  },
+  {
+    "icao": "KIAH",
+    "iata": "IAH",
+    "name": "George Bush Intercontinental Airport",
+    "city": "Houston",
+    "country": "US",
+    "aliases": [
+      "Bush",
+      "George Bush",
+      "George Bush Intercontinental Airport",
+      "Houston",
+      "Houston Intercontinental",
+      "IAH",
+      "KIAH"
+    ],
+    "clue1": "Large airport in southeast Texas.",
+    "clue2": "Major United hub with multiple runway complexes.",
+    "image": "assets/KIAH.png"
+  },
+  {
+    "icao": "KIND",
+    "iata": "IND",
+    "name": "Indianapolis International Airport",
+    "city": "Indianapolis",
+    "country": "US",
+    "aliases": [
+      "IND",
+      "Indianapolis",
+      "Indianapolis International",
+      "Indianapolis International Airport",
+      "KIND"
+    ],
+    "clue1": "Midwest airport serving Indiana\u2019s capital.",
+    "clue2": "Major cargo and logistics presence.",
+    "image": "assets/KIND.png"
+  },
+  {
+    "icao": "KJAX",
+    "iata": "JAX",
+    "name": "Jacksonville International Airport",
+    "city": "Jacksonville",
+    "country": "US",
+    "aliases": [
+      "JAX",
+      "Jacksonville",
+      "Jacksonville International",
+      "Jacksonville International Airport",
+      "KJAX"
+    ],
+    "clue1": "Northeast Florida airport.",
+    "clue2": "Serves Florida\u2019s largest city by land area.",
+    "image": "assets/KJAX.png"
+  },
+  {
+    "icao": "KJFK",
+    "iata": "JFK",
+    "name": "John F. Kennedy International Airport",
+    "city": "New York",
+    "country": "US",
+    "aliases": [
+      "JFK",
+      "John F Kennedy",
+      "John F. Kennedy",
+      "John F. Kennedy International Airport",
+      "KJFK",
+      "Kennedy",
+      "New York",
+      "New York JFK"
+    ],
+    "clue1": "Major coastal airport in New York City.",
+    "clue2": "Large international gateway with multiple terminal complexes.",
+    "image": "assets/KJFK.png"
+  },
+  {
+    "icao": "KLAS",
+    "iata": "LAS",
+    "name": "Harry Reid International Airport",
+    "city": "Las Vegas",
+    "country": "US",
+    "aliases": [
+      "Harry Reid",
+      "Harry Reid International Airport",
+      "KLAS",
+      "LAS",
+      "Las Vegas",
+      "McCarran"
+    ],
+    "clue1": "Desert airport serving a major entertainment city.",
+    "clue2": "Formerly known as McCarran International Airport.",
+    "image": "assets/KLAS.png"
+  },
+  {
+    "icao": "KLAX",
+    "iata": "LAX",
+    "name": "Los Angeles International Airport",
+    "city": "Los Angeles",
+    "country": "US",
+    "aliases": [
+      "KLAX",
+      "LAX",
+      "Los Angeles",
+      "Los Angeles International",
+      "Los Angeles International Airport"
+    ],
+    "clue1": "Major airport on the Southern California coast.",
+    "clue2": "Compact parallel runway layout near the Pacific.",
+    "image": "assets/KLAX.png"
+  },
+  {
+    "icao": "KLGA",
+    "iata": "LGA",
+    "name": "LaGuardia Airport",
+    "city": "New York",
+    "country": "US",
+    "aliases": [
+      "KLGA",
+      "LGA",
+      "La Guardia",
+      "LaGuardia",
+      "LaGuardia Airport",
+      "New York",
+      "New York LaGuardia"
+    ],
+    "clue1": "Compact New York airport along the water.",
+    "clue2": "Known for short-haul operations and challenging urban airspace.",
+    "image": "assets/KLGA.png"
+  },
+  {
+    "icao": "KMCI",
+    "iata": "MCI",
+    "name": "Kansas City International Airport",
+    "city": "Kansas City",
+    "country": "US",
+    "aliases": [
+      "KMCI",
+      "Kansas City",
+      "Kansas City International",
+      "Kansas City International Airport",
+      "MCI"
+    ],
+    "clue1": "Midwestern airport serving Kansas City.",
+    "clue2": "Recently rebuilt around a new single terminal.",
+    "image": "assets/KMCI.png"
+  },
+  {
+    "icao": "KMCO",
+    "iata": "MCO",
+    "name": "Orlando International Airport",
+    "city": "Orlando",
+    "country": "US",
+    "aliases": [
+      "KMCO",
+      "MCO",
+      "Orlando",
+      "Orlando International",
+      "Orlando International Airport"
+    ],
+    "clue1": "Central Florida airport with heavy leisure traffic.",
+    "clue2": "Primary gateway for Disney World and Orlando theme parks.",
+    "image": "assets/KMCO.png"
+  },
+  {
+    "icao": "KMDW",
+    "iata": "MDW",
+    "name": "Chicago Midway International Airport",
+    "city": "Chicago",
+    "country": "US",
+    "aliases": [
+      "Chicago",
+      "Chicago Midway",
+      "Chicago Midway International Airport",
+      "KMDW",
+      "MDW",
+      "Midway"
+    ],
+    "clue1": "Chicago\u2019s smaller major airport.",
+    "clue2": "Known for a compact square runway layout.",
+    "image": "assets/KMDW.png"
+  },
+  {
+    "icao": "KMEM",
+    "iata": "MEM",
+    "name": "Memphis International Airport",
+    "city": "Memphis",
+    "country": "US",
+    "aliases": [
+      "KMEM",
+      "MEM",
+      "Memphis",
+      "Memphis International",
+      "Memphis International Airport"
+    ],
+    "clue1": "Tennessee airport with major cargo operations.",
+    "clue2": "Home to FedEx\u2019s global SuperHub.",
+    "image": "assets/KMEM.png"
+  },
+  {
+    "icao": "KMIA",
+    "iata": "MIA",
+    "name": "Miami International Airport",
+    "city": "Miami",
+    "country": "US",
+    "aliases": [
+      "KMIA",
+      "MIA",
+      "Miami",
+      "Miami International",
+      "Miami International Airport"
+    ],
+    "clue1": "South Florida international gateway.",
+    "clue2": "Major U.S. gateway to Latin America and the Caribbean.",
+    "image": "assets/KMIA.png"
+  },
+  {
+    "icao": "KMKE",
+    "iata": "MKE",
+    "name": "Milwaukee Mitchell International Airport",
+    "city": "Milwaukee",
+    "country": "US",
+    "aliases": [
+      "KMKE",
+      "MKE",
+      "Milwaukee",
+      "Milwaukee Mitchell",
+      "Milwaukee Mitchell International Airport",
+      "Mitchell"
+    ],
+    "clue1": "Great Lakes airport north of Chicago.",
+    "clue2": "Named for aviation pioneer Billy Mitchell.",
+    "image": "assets/KMKE.png"
+  },
+  {
+    "icao": "KMSP",
+    "iata": "MSP",
+    "name": "Minneapolis-Saint Paul International Airport",
+    "city": "Minneapolis",
+    "country": "US",
+    "aliases": [
+      "KMSP",
+      "MSP",
+      "Minneapolis",
+      "Minneapolis Saint Paul",
+      "Minneapolis-Saint Paul International Airport",
+      "Saint Paul",
+      "St Paul"
+    ],
+    "clue1": "Upper Midwest hub airport.",
+    "clue2": "Major Delta hub with parallel runway layout.",
+    "image": "assets/KMSP.png"
+  },
+  {
+    "icao": "KMSY",
+    "iata": "MSY",
+    "name": "Louis Armstrong New Orleans International Airport",
+    "city": "New Orleans",
+    "country": "US",
+    "aliases": [
+      "KMSY",
+      "Louis Armstrong",
+      "Louis Armstrong New Orleans International Airport",
+      "MSY",
+      "New Orleans",
+      "New Orleans International"
+    ],
+    "clue1": "Airport serving New Orleans.",
+    "clue2": "Its IATA code comes from old Moisant Field.",
+    "image": "assets/KMSY.png"
+  },
+  {
+    "icao": "KORD",
+    "iata": "ORD",
+    "name": "Chicago O'Hare International Airport",
+    "city": "Chicago",
+    "country": "US",
+    "aliases": [
+      "Chicago",
+      "Chicago O Hare",
+      "Chicago O'Hare",
+      "Chicago O'Hare International Airport",
+      "KORD",
+      "O Hare",
+      "O'Hare",
+      "ORD",
+      "Ohare"
+    ],
+    "clue1": "Major airport in the Midwest.",
+    "clue2": "Known for many closely spaced parallel runways.",
+    "image": "assets/KORD.png"
+  },
+  {
+    "icao": "KORF",
+    "iata": "ORF",
+    "name": "Norfolk International Airport",
+    "city": "Norfolk",
+    "country": "US",
+    "aliases": [
+      "KORF",
+      "Norfolk",
+      "Norfolk International",
+      "Norfolk International Airport",
+      "ORF"
+    ],
+    "clue1": "Coastal Virginia airport.",
+    "clue2": "Serves the Hampton Roads region and nearby naval activity.",
+    "image": "assets/KORF.png"
+  },
+  {
+    "icao": "KPBI",
+    "iata": "PBI",
+    "name": "Palm Beach International Airport",
+    "city": "West Palm Beach",
+    "country": "US",
+    "aliases": [
+      "KPBI",
+      "PBI",
+      "Palm Beach",
+      "Palm Beach International Airport",
+      "West Palm Beach"
+    ],
+    "clue1": "South Florida airport north of Fort Lauderdale.",
+    "clue2": "Serves West Palm Beach and Palm Beach County.",
+    "image": "assets/KPBI.png"
+  },
+  {
+    "icao": "KPDX",
+    "iata": "PDX",
+    "name": "Portland International Airport",
+    "city": "Portland",
+    "country": "US",
+    "aliases": [
+      "KPDX",
+      "PDX",
+      "Portland",
+      "Portland International",
+      "Portland International Airport"
+    ],
+    "clue1": "Pacific Northwest airport near the Columbia River.",
+    "clue2": "Known for its local vibe and famous carpet.",
+    "image": "assets/KPDX.png"
+  },
+  {
+    "icao": "KPHL",
+    "iata": "PHL",
+    "name": "Philadelphia International Airport",
+    "city": "Philadelphia",
+    "country": "US",
+    "aliases": [
+      "KPHL",
+      "PHL",
+      "Philadelphia",
+      "Philadelphia International",
+      "Philadelphia International Airport"
+    ],
+    "clue1": "Major airport in the Mid-Atlantic.",
+    "clue2": "Urban airport along the Delaware River corridor.",
+    "image": "assets/KPHL.png"
+  },
+  {
+    "icao": "KPHX",
+    "iata": "PHX",
+    "name": "Phoenix Sky Harbor International Airport",
+    "city": "Phoenix",
+    "country": "US",
+    "aliases": [
+      "KPHX",
+      "PHX",
+      "Phoenix",
+      "Phoenix Sky Harbor",
+      "Phoenix Sky Harbor International Airport",
+      "Sky Harbor"
+    ],
+    "clue1": "Large airport in the Arizona desert.",
+    "clue2": "Major hub with runways surrounded by dense city terrain.",
+    "image": "assets/KPHX.png"
+  },
+  {
+    "icao": "KPIT",
+    "iata": "PIT",
+    "name": "Pittsburgh International Airport",
+    "city": "Pittsburgh",
+    "country": "US",
+    "aliases": [
+      "KPIT",
+      "PIT",
+      "Pittsburgh",
+      "Pittsburgh International",
+      "Pittsburgh International Airport"
+    ],
+    "clue1": "Western Pennsylvania airport.",
+    "clue2": "Once a major US Airways hub.",
+    "image": "assets/KPIT.png"
+  },
+  {
+    "icao": "KRDU",
+    "iata": "RDU",
+    "name": "Raleigh-Durham International Airport",
+    "city": "Raleigh-Durham",
+    "country": "US",
+    "aliases": [
+      "Durham",
+      "KRDU",
+      "RDU",
+      "Raleigh",
+      "Raleigh Durham",
+      "Raleigh-Durham",
+      "Raleigh-Durham International Airport"
+    ],
+    "clue1": "Research Triangle airport in North Carolina.",
+    "clue2": "Serves Raleigh, Durham, and Chapel Hill.",
+    "image": "assets/KRDU.png"
+  },
+  {
+    "icao": "KRIC",
+    "iata": "RIC",
+    "name": "Richmond International Airport",
+    "city": "Richmond",
+    "country": "US",
+    "aliases": [
+      "KRIC",
+      "RIC",
+      "Richmond",
+      "Richmond International",
+      "Richmond International Airport"
+    ],
+    "clue1": "Virginia airport serving the state capital.",
+    "clue2": "Located southeast of Richmond.",
+    "image": "assets/KRIC.png"
+  },
+  {
+    "icao": "KRSW",
+    "iata": "RSW",
+    "name": "Southwest Florida International Airport",
+    "city": "Fort Myers",
+    "country": "US",
+    "aliases": [
+      "Fort Myers",
+      "KRSW",
+      "RSW",
+      "Southwest Florida",
+      "Southwest Florida International Airport"
+    ],
+    "clue1": "Airport serving the Fort Myers area.",
+    "clue2": "Large leisure gateway for Florida\u2019s Gulf Coast.",
+    "image": "assets/KRSW.png"
+  },
+  {
+    "icao": "KSAN",
+    "iata": "SAN",
+    "name": "San Diego International Airport",
+    "city": "San Diego",
+    "country": "US",
+    "aliases": [
+      "KSAN",
+      "SAN",
+      "San Diego",
+      "San Diego International",
+      "San Diego International Airport"
+    ],
+    "clue1": "Southern California coastal airport.",
+    "clue2": "Famous for a single runway and downtown approach.",
+    "image": "assets/KSAN.png"
+  },
+  {
+    "icao": "KSAT",
+    "iata": "SAT",
+    "name": "San Antonio International Airport",
+    "city": "San Antonio",
+    "country": "US",
+    "aliases": [
+      "KSAT",
+      "SAT",
+      "San Antonio",
+      "San Antonio International",
+      "San Antonio International Airport"
+    ],
+    "clue1": "South Texas airport.",
+    "clue2": "Serves the city known for the Alamo.",
+    "image": "assets/KSAT.png"
+  },
+  {
+    "icao": "KSDF",
+    "iata": "SDF",
+    "name": "Louisville Muhammad Ali International Airport",
+    "city": "Louisville",
+    "country": "US",
+    "aliases": [
+      "KSDF",
+      "Louisville",
+      "Louisville International",
+      "Louisville Muhammad Ali International Airport",
+      "Muhammad Ali",
+      "SDF"
+    ],
+    "clue1": "Kentucky airport with major cargo presence.",
+    "clue2": "Home to UPS Worldport.",
+    "image": "assets/KSDF.png"
+  },
+  {
+    "icao": "KSEA",
+    "iata": "SEA",
+    "name": "Seattle-Tacoma International Airport",
+    "city": "Seattle",
+    "country": "US",
+    "aliases": [
+      "KSEA",
+      "SEA",
+      "Sea Tac",
+      "SeaTac",
+      "Seattle",
+      "Seattle Tacoma",
+      "Seattle-Tacoma International Airport"
+    ],
+    "clue1": "Pacific Northwest airport south of Seattle.",
+    "clue2": "Parallel north-south runway layout.",
+    "image": "assets/KSEA.png"
+  },
+  {
+    "icao": "KSFO",
+    "iata": "SFO",
+    "name": "San Francisco International Airport",
+    "city": "San Francisco",
+    "country": "US",
+    "aliases": [
+      "KSFO",
+      "SFO",
+      "San Francisco",
+      "San Francisco International",
+      "San Francisco International Airport"
+    ],
+    "clue1": "Northern California coastal airport.",
+    "clue2": "Known for fog and closely spaced parallel approaches.",
+    "image": "assets/KSFO.png"
+  },
+  {
+    "icao": "KSJC",
+    "iata": "SJC",
+    "name": "San Jose Mineta International Airport",
+    "city": "San Jose",
+    "country": "US",
+    "aliases": [
+      "KSJC",
+      "Mineta",
+      "SJC",
+      "San Jose",
+      "San Jose Mineta",
+      "San Jose Mineta International Airport"
+    ],
+    "clue1": "Bay Area airport in Silicon Valley.",
+    "clue2": "Named for Norman Y. Mineta.",
+    "image": "assets/KSJC.png"
+  },
+  {
+    "icao": "KSLC",
+    "iata": "SLC",
+    "name": "Salt Lake City International Airport",
+    "city": "Salt Lake City",
+    "country": "US",
+    "aliases": [
+      "KSLC",
+      "SLC",
+      "Salt Lake",
+      "Salt Lake City",
+      "Salt Lake City International Airport"
+    ],
+    "clue1": "Mountain West airport.",
+    "clue2": "Major Delta hub with long parallel runway layout.",
+    "image": "assets/KSLC.png"
+  },
+  {
+    "icao": "KSMF",
+    "iata": "SMF",
+    "name": "Sacramento International Airport",
+    "city": "Sacramento",
+    "country": "US",
+    "aliases": [
+      "KSMF",
+      "SMF",
+      "Sacramento",
+      "Sacramento International",
+      "Sacramento International Airport"
+    ],
+    "clue1": "Northern California airport serving the state capital.",
+    "clue2": "Located north of downtown Sacramento.",
+    "image": "assets/KSMF.png"
+  },
+  {
+    "icao": "KSTL",
+    "iata": "STL",
+    "name": "St. Louis Lambert International Airport",
+    "city": "St. Louis",
+    "country": "US",
+    "aliases": [
+      "KSTL",
+      "Lambert",
+      "STL",
+      "Saint Louis",
+      "St Louis",
+      "St. Louis",
+      "St. Louis Lambert International Airport"
+    ],
+    "clue1": "Missouri airport with historic hub roots.",
+    "clue2": "Known for its arched terminal roof design.",
+    "image": "assets/KSTL.png"
+  },
+  {
+    "icao": "KSYR",
+    "iata": "SYR",
+    "name": "Syracuse Hancock International Airport",
+    "city": "Syracuse",
+    "country": "US",
+    "aliases": [
+      "Hancock",
+      "KSYR",
+      "SYR",
+      "Syracuse",
+      "Syracuse Hancock",
+      "Syracuse Hancock International Airport"
+    ],
+    "clue1": "Upstate New York airport.",
+    "clue2": "Serves central New York near the Finger Lakes region.",
+    "image": "assets/KSYR.png"
+  },
+  {
+    "icao": "KTPA",
+    "iata": "TPA",
+    "name": "Tampa International Airport",
+    "city": "Tampa",
+    "country": "US",
+    "aliases": [
+      "KTPA",
+      "TPA",
+      "Tampa",
+      "Tampa International",
+      "Tampa International Airport"
+    ],
+    "clue1": "Florida Gulf Coast airport.",
+    "clue2": "Known for its distinctive landside/airside terminal design.",
+    "image": "assets/KTPA.png"
+  }
+]
