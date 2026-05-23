@@ -1,10 +1,486 @@
 [
   {
+    "icao": "BIKF",
+    "iata": "KEF",
+    "name": "Keflavik International Airport",
+    "city": "Reykjavik",
+    "country": "IS",
+    "track": "international",
+    "aliases": [
+      "BIKF",
+      "KEF",
+      "Keflavik",
+      "Keflavik International Airport",
+      "Reykjavik",
+      "Reykjavik Keflavik"
+    ],
+    "clue1": "North Atlantic airport serving Iceland.",
+    "clue2": "Primary international gateway for Reykjavik and Iceland.",
+    "image": "assets/BIKF.png"
+  },
+  {
+    "icao": "CYEG",
+    "iata": "YEG",
+    "name": "Edmonton International Airport",
+    "city": "Edmonton",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYEG",
+      "Edmonton",
+      "Edmonton International",
+      "Edmonton International Airport",
+      "YEG"
+    ],
+    "clue1": "Major airport in western Canada.",
+    "clue2": "Serves Alberta’s capital region.",
+    "image": "assets/CYEG.png"
+  },
+  {
+    "icao": "CYHZ",
+    "iata": "YHZ",
+    "name": "Halifax Stanfield International Airport",
+    "city": "Halifax",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYHZ",
+      "Halifax",
+      "Halifax Stanfield",
+      "Halifax Stanfield International Airport",
+      "YHZ"
+    ],
+    "clue1": "Major airport in Atlantic Canada.",
+    "clue2": "Primary gateway for Nova Scotia.",
+    "image": "assets/CYHZ.png"
+  },
+  {
+    "icao": "CYLW",
+    "iata": "YLW",
+    "name": "Kelowna International Airport",
+    "city": "Kelowna",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYLW",
+      "Kelowna",
+      "Kelowna International Airport",
+      "YLW"
+    ],
+    "clue1": "Canadian airport in British Columbia’s Okanagan region.",
+    "clue2": "Serves Kelowna and wine-country/mountain tourism.",
+    "image": "assets/CYLW.png"
+  },
+  {
+    "icao": "CYOW",
+    "iata": "YOW",
+    "name": "Ottawa International Airport",
+    "city": "Ottawa",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYOW",
+      "Ottawa",
+      "Ottawa International",
+      "Ottawa International Airport",
+      "YOW"
+    ],
+    "clue1": "Airport serving Canada’s capital city.",
+    "clue2": "Its IATA code starts with YOW.",
+    "image": "assets/CYOW.png"
+  },
+  {
+    "icao": "CYQB",
+    "iata": "YQB",
+    "name": "Québec City Jean Lesage International Airport",
+    "city": "Quebec City",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYQB",
+      "Jean Lesage",
+      "Quebec",
+      "Quebec City",
+      "Québec",
+      "Québec City Jean Lesage International Airport",
+      "YQB"
+    ],
+    "clue1": "Airport in eastern Canada’s French-speaking province.",
+    "clue2": "Serves Québec City.",
+    "image": "assets/CYQB.png"
+  },
+  {
+    "icao": "CYQM",
+    "iata": "YQM",
+    "name": "Greater Moncton Roméo LeBlanc International Airport",
+    "city": "Moncton",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYQM",
+      "Greater Moncton",
+      "Greater Moncton Roméo LeBlanc International Airport",
+      "Moncton",
+      "Romeo LeBlanc",
+      "Roméo LeBlanc",
+      "YQM"
+    ],
+    "clue1": "Airport in New Brunswick, Canada.",
+    "clue2": "Serves the Moncton area.",
+    "image": "assets/CYQM.png"
+  },
+  {
+    "icao": "CYQT",
+    "iata": "YQT",
+    "name": "Thunder Bay International Airport",
+    "city": "Thunder Bay",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYQT",
+      "Thunder Bay",
+      "Thunder Bay International Airport",
+      "YQT"
+    ],
+    "clue1": "Northern Ontario airport near Lake Superior.",
+    "clue2": "Serves Thunder Bay.",
+    "image": "assets/CYQT.png"
+  },
+  {
+    "icao": "CYUL",
+    "iata": "YUL",
+    "name": "Montréal–Trudeau International Airport",
+    "city": "Montreal",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYUL",
+      "Montreal",
+      "Montreal Trudeau",
+      "Montréal",
+      "Montréal–Trudeau International Airport",
+      "Trudeau",
+      "YUL"
+    ],
+    "clue1": "Major Canadian airport in Quebec.",
+    "clue2": "Primary international airport serving Montréal.",
+    "image": "assets/CYUL.png"
+  },
+  {
+    "icao": "CYVR",
+    "iata": "YVR",
+    "name": "Vancouver International Airport",
+    "city": "Vancouver",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYVR",
+      "Vancouver",
+      "Vancouver International",
+      "Vancouver International Airport",
+      "YVR"
+    ],
+    "clue1": "Major airport on Canada’s Pacific coast.",
+    "clue2": "Primary gateway for Vancouver and British Columbia.",
+    "image": "assets/CYVR.png"
+  },
+  {
+    "icao": "CYWG",
+    "iata": "YWG",
+    "name": "Winnipeg James Armstrong Richardson International Airport",
+    "city": "Winnipeg",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYWG",
+      "Winnipeg",
+      "Winnipeg James Armstrong Richardson International Airport",
+      "Winnipeg Richardson",
+      "YWG"
+    ],
+    "clue1": "Major airport in central Canada.",
+    "clue2": "Serves Winnipeg, Manitoba.",
+    "image": "assets/CYWG.png"
+  },
+  {
+    "icao": "CYXE",
+    "iata": "YXE",
+    "name": "Saskatoon John G. Diefenbaker International Airport",
+    "city": "Saskatoon",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYXE",
+      "Diefenbaker",
+      "Saskatoon",
+      "Saskatoon John G. Diefenbaker International Airport",
+      "YXE"
+    ],
+    "clue1": "Prairie airport in Saskatchewan.",
+    "clue2": "Serves Saskatoon.",
+    "image": "assets/CYXE.png"
+  },
+  {
+    "icao": "CYYC",
+    "iata": "YYC",
+    "name": "Calgary International Airport",
+    "city": "Calgary",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYYC",
+      "Calgary",
+      "Calgary International",
+      "Calgary International Airport",
+      "YYC"
+    ],
+    "clue1": "Major airport in Alberta.",
+    "clue2": "Primary gateway for Calgary and the Canadian Rockies.",
+    "image": "assets/CYYC.png"
+  },
+  {
+    "icao": "CYYJ",
+    "iata": "YYJ",
+    "name": "Victoria International Airport",
+    "city": "Victoria",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYYJ",
+      "Victoria",
+      "Victoria International",
+      "Victoria International Airport",
+      "YYJ"
+    ],
+    "clue1": "Airport on Vancouver Island.",
+    "clue2": "Serves British Columbia’s capital region.",
+    "image": "assets/CYYJ.png"
+  },
+  {
+    "icao": "CYYZ",
+    "iata": "YYZ",
+    "name": "Toronto Pearson International Airport",
+    "city": "Toronto",
+    "country": "CA",
+    "track": "international",
+    "aliases": [
+      "CYYZ",
+      "Pearson",
+      "Toronto",
+      "Toronto Pearson",
+      "Toronto Pearson International Airport",
+      "YYZ"
+    ],
+    "clue1": "Canada’s busiest airport.",
+    "clue2": "Major international gateway serving Toronto.",
+    "image": "assets/CYYZ.png"
+  },
+  {
+    "icao": "EBBR",
+    "iata": "BRU",
+    "name": "Brussels Airport",
+    "city": "Brussels",
+    "country": "BE",
+    "track": "international",
+    "aliases": [
+      "BRU",
+      "Brussels",
+      "Brussels Airport",
+      "EBBR"
+    ],
+    "clue1": "Major airport in Western Europe.",
+    "clue2": "Primary airport serving Belgium’s capital.",
+    "image": "assets/EBBR.png"
+  },
+  {
+    "icao": "EDDF",
+    "iata": "FRA",
+    "name": "Frankfurt Airport",
+    "city": "Frankfurt",
+    "country": "DE",
+    "track": "international",
+    "aliases": [
+      "EDDF",
+      "FRA",
+      "Frankfurt",
+      "Frankfurt Airport",
+      "Frankfurt Main"
+    ],
+    "clue1": "Major Central European hub airport.",
+    "clue2": "Lufthansa’s primary hub in Frankfurt.",
+    "image": "assets/EDDF.png"
+  },
+  {
+    "icao": "EDDM",
+    "iata": "MUC",
+    "name": "Munich Airport",
+    "city": "Munich",
+    "country": "DE",
+    "track": "international",
+    "aliases": [
+      "EDDM",
+      "MUC",
+      "Munich",
+      "Munich Airport",
+      "München"
+    ],
+    "clue1": "Major airport in southern Germany.",
+    "clue2": "Lufthansa hub serving Bavaria.",
+    "image": "assets/EDDM.png"
+  },
+  {
+    "icao": "EFHK",
+    "iata": "HEL",
+    "name": "Helsinki Airport",
+    "city": "Helsinki",
+    "country": "FI",
+    "track": "international",
+    "aliases": [
+      "EFHK",
+      "HEL",
+      "Helsinki",
+      "Helsinki Airport"
+    ],
+    "clue1": "Nordic airport in Finland.",
+    "clue2": "Major Finnair hub connecting Europe and Asia.",
+    "image": "assets/EFHK.png"
+  },
+  {
+    "icao": "EGLL",
+    "iata": "LHR",
+    "name": "London Heathrow Airport",
+    "city": "London",
+    "country": "GB",
+    "track": "international",
+    "aliases": [
+      "EGLL",
+      "Heathrow",
+      "LHR",
+      "London",
+      "London Heathrow",
+      "London Heathrow Airport"
+    ],
+    "clue1": "Major international airport serving one of Europe’s busiest capitals.",
+    "clue2": "Primary long-haul gateway for London.",
+    "image": "assets/EGLL.png"
+  },
+  {
+    "icao": "EHAM",
+    "iata": "AMS",
+    "name": "Amsterdam Schiphol Airport",
+    "city": "Amsterdam",
+    "country": "NL",
+    "track": "international",
+    "aliases": [
+      "AMS",
+      "Amsterdam",
+      "Amsterdam Schiphol",
+      "Amsterdam Schiphol Airport",
+      "EHAM",
+      "Schiphol"
+    ],
+    "clue1": "Major airport in the Netherlands.",
+    "clue2": "KLM’s hub with a distinctive spread-out runway layout.",
+    "image": "assets/EHAM.png"
+  },
+  {
+    "icao": "EIDW",
+    "iata": "DUB",
+    "name": "Dublin Airport",
+    "city": "Dublin",
+    "country": "IE",
+    "track": "international",
+    "aliases": [
+      "DUB",
+      "Dublin",
+      "Dublin Airport",
+      "EIDW"
+    ],
+    "clue1": "Major airport in Ireland.",
+    "clue2": "Primary airport serving Dublin.",
+    "image": "assets/EIDW.png"
+  },
+  {
+    "icao": "EKCH",
+    "iata": "CPH",
+    "name": "Copenhagen Airport",
+    "city": "Copenhagen",
+    "country": "DK",
+    "track": "international",
+    "aliases": [
+      "CPH",
+      "Copenhagen",
+      "Copenhagen Airport",
+      "EKCH",
+      "Kastrup"
+    ],
+    "clue1": "Major airport in Scandinavia.",
+    "clue2": "Primary airport serving Denmark’s capital.",
+    "image": "assets/EKCH.png"
+  },
+  {
+    "icao": "ENGM",
+    "iata": "OSL",
+    "name": "Oslo Airport",
+    "city": "Oslo",
+    "country": "NO",
+    "track": "international",
+    "aliases": [
+      "ENGM",
+      "Gardermoen",
+      "OSL",
+      "Oslo",
+      "Oslo Airport",
+      "Oslo Gardermoen"
+    ],
+    "clue1": "Major airport in Norway.",
+    "clue2": "Primary airport serving Oslo.",
+    "image": "assets/ENGM.png"
+  },
+  {
+    "icao": "ESSA",
+    "iata": "ARN",
+    "name": "Stockholm Arlanda Airport",
+    "city": "Stockholm",
+    "country": "SE",
+    "track": "international",
+    "aliases": [
+      "ARN",
+      "Arlanda",
+      "ESSA",
+      "Stockholm",
+      "Stockholm Arlanda",
+      "Stockholm Arlanda Airport"
+    ],
+    "clue1": "Major airport in Sweden.",
+    "clue2": "Primary airport serving Stockholm.",
+    "image": "assets/ESSA.png"
+  },
+  {
+    "icao": "KABQ",
+    "iata": "ABQ",
+    "name": "Albuquerque International Sunport",
+    "city": "Albuquerque",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "ABQ",
+      "Albuquerque",
+      "Albuquerque International Sunport",
+      "KABQ",
+      "Sunport"
+    ],
+    "clue1": "Southwestern U.S. airport in New Mexico.",
+    "clue2": "Known as the Albuquerque Sunport.",
+    "image": "assets/KABQ.png"
+  },
+  {
     "icao": "KALB",
     "iata": "ALB",
     "name": "Albany International Airport",
     "city": "Albany",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "ALB",
       "Albany",
@@ -13,8 +489,26 @@
       "KALB"
     ],
     "clue1": "Northeast U.S. capital-region airport.",
-    "clue2": "Serves New York's capital area, not New York City.",
+    "clue2": "Serves New York’s capital area, not New York City.",
     "image": "assets/KALB.png"
+  },
+  {
+    "icao": "KANC",
+    "iata": "ANC",
+    "name": "Ted Stevens Anchorage International Airport",
+    "city": "Anchorage",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "ANC",
+      "Anchorage",
+      "KANC",
+      "Ted Stevens",
+      "Ted Stevens Anchorage International Airport"
+    ],
+    "clue1": "Major Alaska airport.",
+    "clue2": "Key cargo and passenger gateway for Anchorage.",
+    "image": "assets/KANC.png"
   },
   {
     "icao": "KATL",
@@ -22,6 +516,7 @@
     "name": "Hartsfield-Jackson Atlanta International Airport",
     "city": "Atlanta",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "ATL",
       "Atlanta",
@@ -32,7 +527,7 @@
       "KATL"
     ],
     "clue1": "Major airport in the American Southeast.",
-    "clue2": "Delta\u2019s largest hub and one of the busiest airports in the world.",
+    "clue2": "Delta’s largest hub and one of the busiest airports in the world.",
     "image": "assets/KATL.png"
   },
   {
@@ -41,6 +536,7 @@
     "name": "Austin-Bergstrom International Airport",
     "city": "Austin",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "AUS",
       "Austin",
@@ -50,8 +546,27 @@
       "KAUS"
     ],
     "clue1": "Texas airport serving a fast-growing tech and music city.",
-    "clue2": "Named Bergstrom, this field replaced Austin\u2019s old Mueller airport.",
+    "clue2": "Named Bergstrom, this field replaced Austin’s old Mueller airport.",
     "image": "assets/KAUS.png"
+  },
+  {
+    "icao": "KBDL",
+    "iata": "BDL",
+    "name": "Bradley International Airport",
+    "city": "Hartford",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "BDL",
+      "Bradley",
+      "Bradley International",
+      "Bradley International Airport",
+      "Hartford",
+      "KBDL"
+    ],
+    "clue1": "New England airport between Hartford and Springfield.",
+    "clue2": "Known as Bradley International.",
+    "image": "assets/KBDL.png"
   },
   {
     "icao": "KBHM",
@@ -59,6 +574,7 @@
     "name": "Birmingham-Shuttlesworth International Airport",
     "city": "Birmingham",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "BHM",
       "Birmingham",
@@ -72,11 +588,30 @@
     "image": "assets/KBHM.png"
   },
   {
+    "icao": "KBIL",
+    "iata": "BIL",
+    "name": "Billings Logan International Airport",
+    "city": "Billings",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "BIL",
+      "Billings",
+      "Billings Logan",
+      "Billings Logan International Airport",
+      "KBIL"
+    ],
+    "clue1": "Montana airport in the northern Rockies.",
+    "clue2": "Serves Billings.",
+    "image": "assets/KBIL.png"
+  },
+  {
     "icao": "KBNA",
     "iata": "BNA",
     "name": "Nashville International Airport",
     "city": "Nashville",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "BNA",
       "KBNA",
@@ -89,11 +624,29 @@
     "image": "assets/KBNA.png"
   },
   {
+    "icao": "KBOI",
+    "iata": "BOI",
+    "name": "Boise Airport",
+    "city": "Boise",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "BOI",
+      "Boise",
+      "Boise Airport",
+      "KBOI"
+    ],
+    "clue1": "Airport in Idaho’s capital city.",
+    "clue2": "Serves Boise.",
+    "image": "assets/KBOI.png"
+  },
+  {
     "icao": "KBOS",
     "iata": "BOS",
     "name": "Boston Logan International Airport",
     "city": "Boston",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "BOS",
       "Boston",
@@ -112,6 +665,7 @@
     "name": "Buffalo Niagara International Airport",
     "city": "Buffalo",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "BUF",
       "Buffalo",
@@ -124,11 +678,68 @@
     "image": "assets/KBUF.png"
   },
   {
+    "icao": "KBUR",
+    "iata": "BUR",
+    "name": "Hollywood Burbank Airport",
+    "city": "Burbank",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "BUR",
+      "Burbank",
+      "Hollywood Burbank",
+      "Hollywood Burbank Airport",
+      "KBUR"
+    ],
+    "clue1": "Los Angeles-area airport north of downtown.",
+    "clue2": "Known for convenient access to Hollywood and the Valley.",
+    "image": "assets/KBUR.png"
+  },
+  {
+    "icao": "KBWI",
+    "iata": "BWI",
+    "name": "Baltimore/Washington International Thurgood Marshall Airport",
+    "city": "Baltimore",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "BWI",
+      "BWI Marshall",
+      "Baltimore",
+      "Baltimore Washington",
+      "Baltimore/Washington International Thurgood Marshall Airport",
+      "KBWI",
+      "Thurgood Marshall"
+    ],
+    "clue1": "Major Mid-Atlantic airport between Baltimore and Washington.",
+    "clue2": "One of Southwest’s most important East Coast airports.",
+    "image": "assets/KBWI.png"
+  },
+  {
+    "icao": "KCHS",
+    "iata": "CHS",
+    "name": "Charleston International Airport",
+    "city": "Charleston",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "CHS",
+      "Charleston",
+      "Charleston International",
+      "Charleston International Airport",
+      "KCHS"
+    ],
+    "clue1": "Coastal South Carolina airport.",
+    "clue2": "Serves Charleston.",
+    "image": "assets/KCHS.png"
+  },
+  {
     "icao": "KCLE",
     "iata": "CLE",
     "name": "Cleveland Hopkins International Airport",
     "city": "Cleveland",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "CLE",
       "Cleveland",
@@ -147,6 +758,7 @@
     "name": "Charlotte Douglas International Airport",
     "city": "Charlotte",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "CLT",
       "Charlotte",
@@ -159,11 +771,48 @@
     "image": "assets/KCLT.png"
   },
   {
+    "icao": "KCMH",
+    "iata": "CMH",
+    "name": "John Glenn Columbus International Airport",
+    "city": "Columbus",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "CMH",
+      "Columbus",
+      "John Glenn",
+      "John Glenn Columbus",
+      "John Glenn Columbus International Airport",
+      "KCMH"
+    ],
+    "clue1": "Ohio airport serving the state capital.",
+    "clue2": "Named for astronaut John Glenn.",
+    "image": "assets/KCMH.png"
+  },
+  {
+    "icao": "KCOS",
+    "iata": "COS",
+    "name": "Colorado Springs Airport",
+    "city": "Colorado Springs",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "COS",
+      "Colorado Springs",
+      "Colorado Springs Airport",
+      "KCOS"
+    ],
+    "clue1": "Airport south of Denver in Colorado.",
+    "clue2": "Serves Colorado Springs.",
+    "image": "assets/KCOS.png"
+  },
+  {
     "icao": "KCVG",
     "iata": "CVG",
     "name": "Cincinnati/Northern Kentucky International Airport",
     "city": "Cincinnati",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "CVG",
       "Cincinnati",
@@ -177,11 +826,30 @@
     "image": "assets/KCVG.png"
   },
   {
+    "icao": "KDAB",
+    "iata": "DAB",
+    "name": "Daytona Beach International Airport",
+    "city": "Daytona Beach",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "DAB",
+      "Daytona",
+      "Daytona Beach",
+      "Daytona Beach International Airport",
+      "KDAB"
+    ],
+    "clue1": "Florida airport next to a famous speedway city.",
+    "clue2": "Serves Daytona Beach.",
+    "image": "assets/KDAB.png"
+  },
+  {
     "icao": "KDAL",
     "iata": "DAL",
     "name": "Dallas Love Field",
     "city": "Dallas",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "DAL",
       "Dallas",
@@ -200,6 +868,7 @@
     "name": "Ronald Reagan Washington National Airport",
     "city": "Washington",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "DCA",
       "KDCA",
@@ -220,6 +889,7 @@
     "name": "Denver International Airport",
     "city": "Denver",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "DEN",
       "DIA",
@@ -238,6 +908,7 @@
     "name": "Dallas/Fort Worth International Airport",
     "city": "Dallas-Fort Worth",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "DFW",
       "Dallas",
@@ -253,11 +924,29 @@
     "image": "assets/KDFW.png"
   },
   {
+    "icao": "KDSM",
+    "iata": "DSM",
+    "name": "Des Moines International Airport",
+    "city": "Des Moines",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "DSM",
+      "Des Moines",
+      "Des Moines International Airport",
+      "KDSM"
+    ],
+    "clue1": "Airport serving Iowa’s capital city.",
+    "clue2": "Serves Des Moines.",
+    "image": "assets/KDSM.png"
+  },
+  {
     "icao": "KDTW",
     "iata": "DTW",
     "name": "Detroit Metropolitan Wayne County Airport",
     "city": "Detroit",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "DTW",
       "Detroit",
@@ -271,11 +960,29 @@
     "image": "assets/KDTW.png"
   },
   {
+    "icao": "KELP",
+    "iata": "ELP",
+    "name": "El Paso International Airport",
+    "city": "El Paso",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "ELP",
+      "El Paso",
+      "El Paso International Airport",
+      "KELP"
+    ],
+    "clue1": "West Texas airport near the U.S.-Mexico border.",
+    "clue2": "Serves El Paso.",
+    "image": "assets/KELP.png"
+  },
+  {
     "icao": "KEWR",
     "iata": "EWR",
     "name": "Newark Liberty International Airport",
     "city": "Newark",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "EWR",
       "KEWR",
@@ -288,11 +995,65 @@
     "image": "assets/KEWR.png"
   },
   {
+    "icao": "KEYW",
+    "iata": "EYW",
+    "name": "Key West International Airport",
+    "city": "Key West",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "EYW",
+      "KEYW",
+      "Key West",
+      "Key West International Airport"
+    ],
+    "clue1": "Island airport at the end of the Florida Keys.",
+    "clue2": "Serves Key West.",
+    "image": "assets/KEYW.png"
+  },
+  {
+    "icao": "KFAR",
+    "iata": "FAR",
+    "name": "Hector International Airport",
+    "city": "Fargo",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "FAR",
+      "Fargo",
+      "Hector",
+      "Hector International Airport",
+      "KFAR"
+    ],
+    "clue1": "Airport serving eastern North Dakota.",
+    "clue2": "Serves Fargo.",
+    "image": "assets/KFAR.png"
+  },
+  {
+    "icao": "KFAT",
+    "iata": "FAT",
+    "name": "Fresno Yosemite International Airport",
+    "city": "Fresno",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "FAT",
+      "Fresno",
+      "Fresno Yosemite",
+      "Fresno Yosemite International Airport",
+      "KFAT"
+    ],
+    "clue1": "Central California airport.",
+    "clue2": "Gateway to Fresno and Yosemite-area travel.",
+    "image": "assets/KFAT.png"
+  },
+  {
     "icao": "KFLL",
     "iata": "FLL",
     "name": "Fort Lauderdale-Hollywood International Airport",
     "city": "Fort Lauderdale",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "FLL",
       "Fort Lauderdale",
@@ -305,11 +1066,83 @@
     "image": "assets/KFLL.png"
   },
   {
+    "icao": "KFWA",
+    "iata": "FWA",
+    "name": "Fort Wayne International Airport",
+    "city": "Fort Wayne",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "FWA",
+      "Fort Wayne",
+      "Fort Wayne International Airport",
+      "KFWA"
+    ],
+    "clue1": "Northeast Indiana airport.",
+    "clue2": "Serves Fort Wayne.",
+    "image": "assets/KFWA.png"
+  },
+  {
+    "icao": "KGEG",
+    "iata": "GEG",
+    "name": "Spokane International Airport",
+    "city": "Spokane",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "GEG",
+      "KGEG",
+      "Spokane",
+      "Spokane International Airport"
+    ],
+    "clue1": "Airport in eastern Washington.",
+    "clue2": "Serves Spokane.",
+    "image": "assets/KGEG.png"
+  },
+  {
+    "icao": "KGRR",
+    "iata": "GRR",
+    "name": "Gerald R. Ford International Airport",
+    "city": "Grand Rapids",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "GRR",
+      "Gerald Ford",
+      "Gerald R Ford",
+      "Gerald R. Ford International Airport",
+      "Grand Rapids",
+      "KGRR"
+    ],
+    "clue1": "West Michigan airport.",
+    "clue2": "Named for President Gerald R. Ford.",
+    "image": "assets/KGRR.png"
+  },
+  {
+    "icao": "KHNL",
+    "iata": "HNL",
+    "name": "Daniel K. Inouye International Airport",
+    "city": "Honolulu",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Daniel K Inouye",
+      "Daniel K. Inouye International Airport",
+      "HNL",
+      "Honolulu",
+      "KHNL"
+    ],
+    "clue1": "Major airport in Hawaii.",
+    "clue2": "Primary airport serving Honolulu.",
+    "image": "assets/KHNL.png"
+  },
+  {
     "icao": "KHOU",
     "iata": "HOU",
     "name": "William P. Hobby Airport",
     "city": "Houston",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "HOU",
       "Hobby",
@@ -329,6 +1162,7 @@
     "name": "Washington Dulles International Airport",
     "city": "Washington",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Dulles",
       "IAD",
@@ -347,6 +1181,7 @@
     "name": "George Bush Intercontinental Airport",
     "city": "Houston",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Bush",
       "George Bush",
@@ -361,11 +1196,30 @@
     "image": "assets/KIAH.png"
   },
   {
+    "icao": "KICT",
+    "iata": "ICT",
+    "name": "Wichita Dwight D. Eisenhower National Airport",
+    "city": "Wichita",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Eisenhower",
+      "ICT",
+      "KICT",
+      "Wichita",
+      "Wichita Dwight D. Eisenhower National Airport"
+    ],
+    "clue1": "Kansas airport serving Wichita.",
+    "clue2": "Named for President Dwight D. Eisenhower.",
+    "image": "assets/KICT.png"
+  },
+  {
     "icao": "KIND",
     "iata": "IND",
     "name": "Indianapolis International Airport",
     "city": "Indianapolis",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "IND",
       "Indianapolis",
@@ -373,7 +1227,7 @@
       "Indianapolis International Airport",
       "KIND"
     ],
-    "clue1": "Midwest airport serving Indiana\u2019s capital.",
+    "clue1": "Midwest airport serving Indiana’s capital.",
     "clue2": "Major cargo and logistics presence.",
     "image": "assets/KIND.png"
   },
@@ -383,6 +1237,7 @@
     "name": "Jacksonville International Airport",
     "city": "Jacksonville",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "JAX",
       "Jacksonville",
@@ -391,7 +1246,7 @@
       "KJAX"
     ],
     "clue1": "Northeast Florida airport.",
-    "clue2": "Serves Florida\u2019s largest city by land area.",
+    "clue2": "Serves Florida’s largest city by land area.",
     "image": "assets/KJAX.png"
   },
   {
@@ -400,6 +1255,7 @@
     "name": "John F. Kennedy International Airport",
     "city": "New York",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "JFK",
       "John F Kennedy",
@@ -415,11 +1271,31 @@
     "image": "assets/KJFK.png"
   },
   {
+    "icao": "KKOA",
+    "iata": "KOA",
+    "name": "Ellison Onizuka Kona International Airport",
+    "city": "Kona",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Ellison Onizuka",
+      "Ellison Onizuka Kona International Airport",
+      "KKOA",
+      "KOA",
+      "Kona",
+      "Kona International"
+    ],
+    "clue1": "Airport on the Big Island of Hawaii.",
+    "clue2": "Serves Kona.",
+    "image": "assets/KKOA.png"
+  },
+  {
     "icao": "KLAS",
     "iata": "LAS",
     "name": "Harry Reid International Airport",
     "city": "Las Vegas",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Harry Reid",
       "Harry Reid International Airport",
@@ -438,6 +1314,7 @@
     "name": "Los Angeles International Airport",
     "city": "Los Angeles",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KLAX",
       "LAX",
@@ -450,11 +1327,30 @@
     "image": "assets/KLAX.png"
   },
   {
+    "icao": "KLBB",
+    "iata": "LBB",
+    "name": "Lubbock Preston Smith International Airport",
+    "city": "Lubbock",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KLBB",
+      "LBB",
+      "Lubbock",
+      "Lubbock Preston Smith International Airport",
+      "Preston Smith"
+    ],
+    "clue1": "West Texas airport.",
+    "clue2": "Serves Lubbock.",
+    "image": "assets/KLBB.png"
+  },
+  {
     "icao": "KLGA",
     "iata": "LGA",
     "name": "LaGuardia Airport",
     "city": "New York",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KLGA",
       "LGA",
@@ -469,11 +1365,47 @@
     "image": "assets/KLGA.png"
   },
   {
+    "icao": "KLGB",
+    "iata": "LGB",
+    "name": "Long Beach Airport",
+    "city": "Long Beach",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KLGB",
+      "LGB",
+      "Long Beach",
+      "Long Beach Airport"
+    ],
+    "clue1": "Southern California airport south of Los Angeles.",
+    "clue2": "Known for its historic terminal and compact layout.",
+    "image": "assets/KLGB.png"
+  },
+  {
+    "icao": "KLIT",
+    "iata": "LIT",
+    "name": "Bill and Hillary Clinton National Airport",
+    "city": "Little Rock",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Bill and Hillary Clinton National Airport",
+      "Clinton National",
+      "KLIT",
+      "LIT",
+      "Little Rock"
+    ],
+    "clue1": "Airport serving Arkansas’s capital city.",
+    "clue2": "Also known as Clinton National Airport.",
+    "image": "assets/KLIT.png"
+  },
+  {
     "icao": "KMCI",
     "iata": "MCI",
     "name": "Kansas City International Airport",
     "city": "Kansas City",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMCI",
       "Kansas City",
@@ -491,6 +1423,7 @@
     "name": "Orlando International Airport",
     "city": "Orlando",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMCO",
       "MCO",
@@ -508,6 +1441,7 @@
     "name": "Chicago Midway International Airport",
     "city": "Chicago",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Chicago",
       "Chicago Midway",
@@ -516,7 +1450,7 @@
       "MDW",
       "Midway"
     ],
-    "clue1": "Chicago\u2019s smaller major airport.",
+    "clue1": "Chicago’s smaller major airport.",
     "clue2": "Known for a compact square runway layout.",
     "image": "assets/KMDW.png"
   },
@@ -526,6 +1460,7 @@
     "name": "Memphis International Airport",
     "city": "Memphis",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMEM",
       "MEM",
@@ -534,7 +1469,7 @@
       "Memphis International Airport"
     ],
     "clue1": "Tennessee airport with major cargo operations.",
-    "clue2": "Home to FedEx\u2019s global SuperHub.",
+    "clue2": "Home to FedEx’s global SuperHub.",
     "image": "assets/KMEM.png"
   },
   {
@@ -543,6 +1478,7 @@
     "name": "Miami International Airport",
     "city": "Miami",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMIA",
       "MIA",
@@ -560,6 +1496,7 @@
     "name": "Milwaukee Mitchell International Airport",
     "city": "Milwaukee",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMKE",
       "MKE",
@@ -573,11 +1510,30 @@
     "image": "assets/KMKE.png"
   },
   {
+    "icao": "KMSN",
+    "iata": "MSN",
+    "name": "Dane County Regional Airport",
+    "city": "Madison",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Dane County",
+      "Dane County Regional Airport",
+      "KMSN",
+      "MSN",
+      "Madison"
+    ],
+    "clue1": "Airport serving Wisconsin’s capital city.",
+    "clue2": "Known as Dane County Regional Airport.",
+    "image": "assets/KMSN.png"
+  },
+  {
     "icao": "KMSP",
     "iata": "MSP",
     "name": "Minneapolis-Saint Paul International Airport",
     "city": "Minneapolis",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMSP",
       "MSP",
@@ -597,6 +1553,7 @@
     "name": "Louis Armstrong New Orleans International Airport",
     "city": "New Orleans",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KMSY",
       "Louis Armstrong",
@@ -610,11 +1567,85 @@
     "image": "assets/KMSY.png"
   },
   {
+    "icao": "KOAK",
+    "iata": "OAK",
+    "name": "Oakland International Airport",
+    "city": "Oakland",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KOAK",
+      "OAK",
+      "Oakland",
+      "Oakland International",
+      "Oakland International Airport"
+    ],
+    "clue1": "Bay Area airport across the bay from San Francisco.",
+    "clue2": "Important airport for Southwest and Alaska operations.",
+    "image": "assets/KOAK.png"
+  },
+  {
+    "icao": "KOKC",
+    "iata": "OKC",
+    "name": "Will Rogers World Airport",
+    "city": "Oklahoma City",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KOKC",
+      "OKC",
+      "Oklahoma City",
+      "Will Rogers",
+      "Will Rogers World Airport"
+    ],
+    "clue1": "Airport serving Oklahoma’s capital city.",
+    "clue2": "Named for Will Rogers.",
+    "image": "assets/KOKC.png"
+  },
+  {
+    "icao": "KOMA",
+    "iata": "OMA",
+    "name": "Eppley Airfield",
+    "city": "Omaha",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Eppley",
+      "Eppley Airfield",
+      "KOMA",
+      "OMA",
+      "Omaha"
+    ],
+    "clue1": "Airport serving Omaha, Nebraska.",
+    "clue2": "Known as Eppley Airfield.",
+    "image": "assets/KOMA.png"
+  },
+  {
+    "icao": "KONT",
+    "iata": "ONT",
+    "name": "Ontario International Airport",
+    "city": "Ontario",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KONT",
+      "ONT",
+      "Ontario",
+      "Ontario California",
+      "Ontario International",
+      "Ontario International Airport"
+    ],
+    "clue1": "Southern California airport east of Los Angeles.",
+    "clue2": "Serves the Inland Empire.",
+    "image": "assets/KONT.png"
+  },
+  {
     "icao": "KORD",
     "iata": "ORD",
     "name": "Chicago O'Hare International Airport",
     "city": "Chicago",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Chicago",
       "Chicago O Hare",
@@ -636,6 +1667,7 @@
     "name": "Norfolk International Airport",
     "city": "Norfolk",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KORF",
       "Norfolk",
@@ -653,6 +1685,7 @@
     "name": "Palm Beach International Airport",
     "city": "West Palm Beach",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KPBI",
       "PBI",
@@ -670,12 +1703,14 @@
     "name": "Portland International Airport",
     "city": "Portland",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KPDX",
       "PDX",
       "Portland",
       "Portland International",
-      "Portland International Airport"
+      "Portland International Airport",
+      "Portland Oregon"
     ],
     "clue1": "Pacific Northwest airport near the Columbia River.",
     "clue2": "Known for its local vibe and famous carpet.",
@@ -687,6 +1722,7 @@
     "name": "Philadelphia International Airport",
     "city": "Philadelphia",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KPHL",
       "PHL",
@@ -704,6 +1740,7 @@
     "name": "Phoenix Sky Harbor International Airport",
     "city": "Phoenix",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KPHX",
       "PHX",
@@ -722,6 +1759,7 @@
     "name": "Pittsburgh International Airport",
     "city": "Pittsburgh",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KPIT",
       "PIT",
@@ -734,11 +1772,65 @@
     "image": "assets/KPIT.png"
   },
   {
+    "icao": "KPNS",
+    "iata": "PNS",
+    "name": "Pensacola International Airport",
+    "city": "Pensacola",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KPNS",
+      "PNS",
+      "Pensacola",
+      "Pensacola International Airport"
+    ],
+    "clue1": "Florida Panhandle airport.",
+    "clue2": "Serves Pensacola.",
+    "image": "assets/KPNS.png"
+  },
+  {
+    "icao": "KPSP",
+    "iata": "PSP",
+    "name": "Palm Springs International Airport",
+    "city": "Palm Springs",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KPSP",
+      "PSP",
+      "Palm Springs",
+      "Palm Springs International Airport"
+    ],
+    "clue1": "Desert airport in Southern California.",
+    "clue2": "Serves Palm Springs and the Coachella Valley.",
+    "image": "assets/KPSP.png"
+  },
+  {
+    "icao": "KPWM",
+    "iata": "PWM",
+    "name": "Portland International Jetport",
+    "city": "Portland",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KPWM",
+      "PWM",
+      "Portland",
+      "Portland International Jetport",
+      "Portland Jetport",
+      "Portland Maine"
+    ],
+    "clue1": "Airport serving Maine’s largest city.",
+    "clue2": "Known as the Portland International Jetport.",
+    "image": "assets/KPWM.png"
+  },
+  {
     "icao": "KRDU",
     "iata": "RDU",
     "name": "Raleigh-Durham International Airport",
     "city": "Raleigh-Durham",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Durham",
       "KRDU",
@@ -758,6 +1850,7 @@
     "name": "Richmond International Airport",
     "city": "Richmond",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KRIC",
       "RIC",
@@ -770,11 +1863,30 @@
     "image": "assets/KRIC.png"
   },
   {
+    "icao": "KROC",
+    "iata": "ROC",
+    "name": "Frederick Douglass Greater Rochester International Airport",
+    "city": "Rochester",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Frederick Douglass Greater Rochester International Airport",
+      "Greater Rochester",
+      "KROC",
+      "ROC",
+      "Rochester"
+    ],
+    "clue1": "Airport in western New York.",
+    "clue2": "Serves Rochester.",
+    "image": "assets/KROC.png"
+  },
+  {
     "icao": "KRSW",
     "iata": "RSW",
     "name": "Southwest Florida International Airport",
     "city": "Fort Myers",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Fort Myers",
       "KRSW",
@@ -783,7 +1895,7 @@
       "Southwest Florida International Airport"
     ],
     "clue1": "Airport serving the Fort Myers area.",
-    "clue2": "Large leisure gateway for Florida\u2019s Gulf Coast.",
+    "clue2": "Large leisure gateway for Florida’s Gulf Coast.",
     "image": "assets/KRSW.png"
   },
   {
@@ -792,6 +1904,7 @@
     "name": "San Diego International Airport",
     "city": "San Diego",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSAN",
       "SAN",
@@ -809,6 +1922,7 @@
     "name": "San Antonio International Airport",
     "city": "San Antonio",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSAT",
       "SAT",
@@ -821,11 +1935,30 @@
     "image": "assets/KSAT.png"
   },
   {
+    "icao": "KSAV",
+    "iata": "SAV",
+    "name": "Savannah/Hilton Head International Airport",
+    "city": "Savannah",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Hilton Head",
+      "KSAV",
+      "SAV",
+      "Savannah",
+      "Savannah/Hilton Head International Airport"
+    ],
+    "clue1": "Coastal Georgia airport.",
+    "clue2": "Serves Savannah and Hilton Head travelers.",
+    "image": "assets/KSAV.png"
+  },
+  {
     "icao": "KSDF",
     "iata": "SDF",
     "name": "Louisville Muhammad Ali International Airport",
     "city": "Louisville",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSDF",
       "Louisville",
@@ -844,6 +1977,7 @@
     "name": "Seattle-Tacoma International Airport",
     "city": "Seattle",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSEA",
       "SEA",
@@ -863,6 +1997,7 @@
     "name": "San Francisco International Airport",
     "city": "San Francisco",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSFO",
       "SFO",
@@ -880,6 +2015,7 @@
     "name": "San Jose Mineta International Airport",
     "city": "San Jose",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSJC",
       "Mineta",
@@ -898,6 +2034,7 @@
     "name": "Salt Lake City International Airport",
     "city": "Salt Lake City",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSLC",
       "SLC",
@@ -915,6 +2052,7 @@
     "name": "Sacramento International Airport",
     "city": "Sacramento",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSMF",
       "SMF",
@@ -927,11 +2065,50 @@
     "image": "assets/KSMF.png"
   },
   {
+    "icao": "KSNA",
+    "iata": "SNA",
+    "name": "John Wayne Airport",
+    "city": "Orange County",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "John Wayne",
+      "John Wayne Airport",
+      "KSNA",
+      "Orange County",
+      "SNA",
+      "Santa Ana"
+    ],
+    "clue1": "Southern California airport serving Orange County.",
+    "clue2": "Named after actor John Wayne.",
+    "image": "assets/KSNA.png"
+  },
+  {
+    "icao": "KSRQ",
+    "iata": "SRQ",
+    "name": "Sarasota Bradenton International Airport",
+    "city": "Sarasota",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Bradenton",
+      "KSRQ",
+      "SRQ",
+      "Sarasota",
+      "Sarasota Bradenton",
+      "Sarasota Bradenton International Airport"
+    ],
+    "clue1": "Florida Gulf Coast airport.",
+    "clue2": "Serves Sarasota and Bradenton.",
+    "image": "assets/KSRQ.png"
+  },
+  {
     "icao": "KSTL",
     "iata": "STL",
     "name": "St. Louis Lambert International Airport",
     "city": "St. Louis",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KSTL",
       "Lambert",
@@ -951,6 +2128,7 @@
     "name": "Syracuse Hancock International Airport",
     "city": "Syracuse",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "Hancock",
       "KSYR",
@@ -969,6 +2147,7 @@
     "name": "Tampa International Airport",
     "city": "Tampa",
     "country": "US",
+    "track": "domestic",
     "aliases": [
       "KTPA",
       "TPA",
@@ -979,5 +2158,644 @@
     "clue1": "Florida Gulf Coast airport.",
     "clue2": "Known for its distinctive landside/airside terminal design.",
     "image": "assets/KTPA.png"
+  },
+  {
+    "icao": "KTUL",
+    "iata": "TUL",
+    "name": "Tulsa International Airport",
+    "city": "Tulsa",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KTUL",
+      "TUL",
+      "Tulsa",
+      "Tulsa International Airport"
+    ],
+    "clue1": "Airport in northeastern Oklahoma.",
+    "clue2": "Serves Tulsa.",
+    "image": "assets/KTUL.png"
+  },
+  {
+    "icao": "KTYS",
+    "iata": "TYS",
+    "name": "McGhee Tyson Airport",
+    "city": "Knoxville",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "KTYS",
+      "Knoxville",
+      "McGhee Tyson",
+      "McGhee Tyson Airport",
+      "TYS"
+    ],
+    "clue1": "East Tennessee airport.",
+    "clue2": "Serves Knoxville and the Smoky Mountains region.",
+    "image": "assets/KTYS.png"
+  },
+  {
+    "icao": "LEBL",
+    "iata": "BCN",
+    "name": "Barcelona El Prat Airport",
+    "city": "Barcelona",
+    "country": "ES",
+    "track": "international",
+    "aliases": [
+      "BCN",
+      "Barcelona",
+      "Barcelona El Prat",
+      "Barcelona El Prat Airport",
+      "El Prat",
+      "LEBL"
+    ],
+    "clue1": "Major airport on Spain’s Mediterranean coast.",
+    "clue2": "Primary airport serving Barcelona.",
+    "image": "assets/LEBL.png"
+  },
+  {
+    "icao": "LEMD",
+    "iata": "MAD",
+    "name": "Adolfo Suárez Madrid-Barajas Airport",
+    "city": "Madrid",
+    "country": "ES",
+    "track": "international",
+    "aliases": [
+      "Adolfo Suárez Madrid-Barajas Airport",
+      "Barajas",
+      "LEMD",
+      "MAD",
+      "Madrid",
+      "Madrid Barajas"
+    ],
+    "clue1": "Major airport in Spain’s capital.",
+    "clue2": "Iberia’s primary hub.",
+    "image": "assets/LEMD.png"
+  },
+  {
+    "icao": "LFPG",
+    "iata": "CDG",
+    "name": "Paris Charles de Gaulle Airport",
+    "city": "Paris",
+    "country": "FR",
+    "track": "international",
+    "aliases": [
+      "CDG",
+      "Charles de Gaulle",
+      "LFPG",
+      "Paris",
+      "Paris CDG",
+      "Paris Charles de Gaulle Airport"
+    ],
+    "clue1": "Major airport serving the French capital.",
+    "clue2": "Air France’s primary hub north of Paris.",
+    "image": "assets/LFPG.png"
+  },
+  {
+    "icao": "LGAV",
+    "iata": "ATH",
+    "name": "Athens International Airport",
+    "city": "Athens",
+    "country": "GR",
+    "track": "international",
+    "aliases": [
+      "ATH",
+      "Athens",
+      "Athens International",
+      "Athens International Airport",
+      "LGAV"
+    ],
+    "clue1": "Major airport in Greece.",
+    "clue2": "Primary airport serving Athens.",
+    "image": "assets/LGAV.png"
+  },
+  {
+    "icao": "LIMC",
+    "iata": "MXP",
+    "name": "Milan Malpensa Airport",
+    "city": "Milan",
+    "country": "IT",
+    "track": "international",
+    "aliases": [
+      "LIMC",
+      "MXP",
+      "Malpensa",
+      "Milan",
+      "Milan Malpensa",
+      "Milan Malpensa Airport"
+    ],
+    "clue1": "Major airport in northern Italy.",
+    "clue2": "Primary long-haul airport for Milan.",
+    "image": "assets/LIMC.png"
+  },
+  {
+    "icao": "LIRF",
+    "iata": "FCO",
+    "name": "Rome Fiumicino Airport",
+    "city": "Rome",
+    "country": "IT",
+    "track": "international",
+    "aliases": [
+      "FCO",
+      "Fiumicino",
+      "LIRF",
+      "Rome",
+      "Rome Fiumicino",
+      "Rome Fiumicino Airport"
+    ],
+    "clue1": "Major airport serving Italy’s capital.",
+    "clue2": "Also called Leonardo da Vinci Airport.",
+    "image": "assets/LIRF.png"
+  },
+  {
+    "icao": "LLBG",
+    "iata": "TLV",
+    "name": "Ben Gurion Airport",
+    "city": "Tel Aviv",
+    "country": "IL",
+    "track": "international",
+    "aliases": [
+      "Ben Gurion",
+      "Ben Gurion Airport",
+      "LLBG",
+      "TLV",
+      "Tel Aviv"
+    ],
+    "clue1": "Major Middle East airport on the Mediterranean.",
+    "clue2": "Primary international airport for Israel.",
+    "image": "assets/LLBG.png"
+  },
+  {
+    "icao": "LPPT",
+    "iata": "LIS",
+    "name": "Lisbon Airport",
+    "city": "Lisbon",
+    "country": "PT",
+    "track": "international",
+    "aliases": [
+      "LIS",
+      "LPPT",
+      "Lisboa",
+      "Lisbon",
+      "Lisbon Airport"
+    ],
+    "clue1": "Major airport in Portugal.",
+    "clue2": "Primary airport serving Lisbon.",
+    "image": "assets/LPPT.png"
+  },
+  {
+    "icao": "LSZH",
+    "iata": "ZRH",
+    "name": "Zurich Airport",
+    "city": "Zurich",
+    "country": "CH",
+    "track": "international",
+    "aliases": [
+      "LSZH",
+      "ZRH",
+      "Zurich",
+      "Zurich Airport",
+      "Zürich"
+    ],
+    "clue1": "Major airport in Switzerland.",
+    "clue2": "Primary hub for Swiss International Air Lines.",
+    "image": "assets/LSZH.png"
+  },
+  {
+    "icao": "MDPC",
+    "iata": "PUJ",
+    "name": "Punta Cana International Airport",
+    "city": "Punta Cana",
+    "country": "DO",
+    "track": "international",
+    "aliases": [
+      "MDPC",
+      "PUJ",
+      "Punta Cana",
+      "Punta Cana International Airport"
+    ],
+    "clue1": "Major Caribbean leisure airport.",
+    "clue2": "Serves Punta Cana in the Dominican Republic.",
+    "image": "assets/MDPC.png"
+  },
+  {
+    "icao": "MKJS",
+    "iata": "MBJ",
+    "name": "Sangster International Airport",
+    "city": "Montego Bay",
+    "country": "JM",
+    "track": "international",
+    "aliases": [
+      "MBJ",
+      "MKJS",
+      "Montego Bay",
+      "Sangster",
+      "Sangster International Airport"
+    ],
+    "clue1": "Major Caribbean leisure airport.",
+    "clue2": "Primary airport for Montego Bay, Jamaica.",
+    "image": "assets/MKJS.png"
+  },
+  {
+    "icao": "MMGL",
+    "iata": "GDL",
+    "name": "Guadalajara International Airport",
+    "city": "Guadalajara",
+    "country": "MX",
+    "track": "international",
+    "aliases": [
+      "GDL",
+      "Guadalajara",
+      "Guadalajara International Airport",
+      "MMGL"
+    ],
+    "clue1": "Major airport in western Mexico.",
+    "clue2": "Serves Guadalajara.",
+    "image": "assets/MMGL.png"
+  },
+  {
+    "icao": "MMMX",
+    "iata": "MEX",
+    "name": "Mexico City International Airport",
+    "city": "Mexico City",
+    "country": "MX",
+    "track": "international",
+    "aliases": [
+      "Ciudad de Mexico",
+      "MEX",
+      "MMMX",
+      "Mexico City",
+      "Mexico City International Airport"
+    ],
+    "clue1": "Major airport serving Mexico’s capital.",
+    "clue2": "One of Latin America’s busiest airports.",
+    "image": "assets/MMMX.png"
+  },
+  {
+    "icao": "MMMY",
+    "iata": "MTY",
+    "name": "Monterrey International Airport",
+    "city": "Monterrey",
+    "country": "MX",
+    "track": "international",
+    "aliases": [
+      "MMMY",
+      "MTY",
+      "Monterrey",
+      "Monterrey International Airport"
+    ],
+    "clue1": "Major airport in northern Mexico.",
+    "clue2": "Serves Monterrey.",
+    "image": "assets/MMMY.png"
+  },
+  {
+    "icao": "MMUN",
+    "iata": "CUN",
+    "name": "Cancún International Airport",
+    "city": "Cancun",
+    "country": "MX",
+    "track": "international",
+    "aliases": [
+      "CUN",
+      "Cancun",
+      "Cancún",
+      "Cancún International Airport",
+      "MMUN"
+    ],
+    "clue1": "Major Mexican leisure gateway.",
+    "clue2": "Primary airport for Cancún and the Riviera Maya.",
+    "image": "assets/MMUN.png"
+  },
+  {
+    "icao": "MYNN",
+    "iata": "NAS",
+    "name": "Lynden Pindling International Airport",
+    "city": "Nassau",
+    "country": "BS",
+    "track": "international",
+    "aliases": [
+      "Lynden Pindling",
+      "Lynden Pindling International Airport",
+      "MYNN",
+      "NAS",
+      "Nassau"
+    ],
+    "clue1": "Major airport in The Bahamas.",
+    "clue2": "Primary airport serving Nassau.",
+    "image": "assets/MYNN.png"
+  },
+  {
+    "icao": "NZAA",
+    "iata": "AKL",
+    "name": "Auckland Airport",
+    "city": "Auckland",
+    "country": "NZ",
+    "track": "international",
+    "aliases": [
+      "AKL",
+      "Auckland",
+      "Auckland Airport",
+      "NZAA"
+    ],
+    "clue1": "Major airport in New Zealand.",
+    "clue2": "Primary international gateway for Auckland.",
+    "image": "assets/NZAA.png"
+  },
+  {
+    "icao": "OMAA",
+    "iata": "AUH",
+    "name": "Zayed International Airport",
+    "city": "Abu Dhabi",
+    "country": "AE",
+    "track": "international",
+    "aliases": [
+      "AUH",
+      "Abu Dhabi",
+      "OMAA",
+      "Zayed International",
+      "Zayed International Airport"
+    ],
+    "clue1": "Major airport in the United Arab Emirates.",
+    "clue2": "Primary airport serving Abu Dhabi.",
+    "image": "assets/OMAA.png"
+  },
+  {
+    "icao": "OMDB",
+    "iata": "DXB",
+    "name": "Dubai International Airport",
+    "city": "Dubai",
+    "country": "AE",
+    "track": "international",
+    "aliases": [
+      "DXB",
+      "Dubai",
+      "Dubai International",
+      "Dubai International Airport",
+      "OMDB"
+    ],
+    "clue1": "Major Middle East global connector.",
+    "clue2": "Emirates’ flagship mega-hub.",
+    "image": "assets/OMDB.png"
+  },
+  {
+    "icao": "OTHH",
+    "iata": "DOH",
+    "name": "Hamad International Airport",
+    "city": "Doha",
+    "country": "QA",
+    "track": "international",
+    "aliases": [
+      "DOH",
+      "Doha",
+      "Hamad",
+      "Hamad International",
+      "Hamad International Airport",
+      "OTHH"
+    ],
+    "clue1": "Major Gulf-region hub airport.",
+    "clue2": "Qatar Airways’ primary hub.",
+    "image": "assets/OTHH.png"
+  },
+  {
+    "icao": "PGUM",
+    "iata": "GUM",
+    "name": "Antonio B. Won Pat International Airport",
+    "city": "Guam",
+    "country": "US",
+    "track": "domestic",
+    "aliases": [
+      "Antonio B Won Pat",
+      "Antonio B. Won Pat International Airport",
+      "GUM",
+      "Guam",
+      "PGUM"
+    ],
+    "clue1": "U.S. territory airport in the western Pacific.",
+    "clue2": "Key United island-hopper gateway.",
+    "image": "assets/PGUM.png"
+  },
+  {
+    "icao": "RJAA",
+    "iata": "NRT",
+    "name": "Narita International Airport",
+    "city": "Tokyo",
+    "country": "JP",
+    "track": "international",
+    "aliases": [
+      "NRT",
+      "Narita",
+      "Narita International Airport",
+      "RJAA",
+      "Tokyo",
+      "Tokyo Narita"
+    ],
+    "clue1": "Major airport outside Tokyo.",
+    "clue2": "Tokyo’s long-haul international gateway alongside Haneda.",
+    "image": "assets/RJAA.png"
+  },
+  {
+    "icao": "RJTT",
+    "iata": "HND",
+    "name": "Tokyo Haneda Airport",
+    "city": "Tokyo",
+    "country": "JP",
+    "track": "international",
+    "aliases": [
+      "HND",
+      "Haneda",
+      "RJTT",
+      "Tokyo",
+      "Tokyo Haneda",
+      "Tokyo Haneda Airport"
+    ],
+    "clue1": "Major airport serving one of the world’s largest cities.",
+    "clue2": "Much closer to central Tokyo than Narita.",
+    "image": "assets/RJTT.png"
+  },
+  {
+    "icao": "RKSI",
+    "iata": "ICN",
+    "name": "Incheon International Airport",
+    "city": "Seoul",
+    "country": "KR",
+    "track": "international",
+    "aliases": [
+      "ICN",
+      "Incheon",
+      "Incheon International Airport",
+      "RKSI",
+      "Seoul",
+      "Seoul Incheon"
+    ],
+    "clue1": "Major airport serving South Korea’s capital region.",
+    "clue2": "Korean Air and Asiana’s major international gateway.",
+    "image": "assets/RKSI.png"
+  },
+  {
+    "icao": "SAEZ",
+    "iata": "EZE",
+    "name": "Ministro Pistarini International Airport",
+    "city": "Buenos Aires",
+    "country": "AR",
+    "track": "international",
+    "aliases": [
+      "Buenos Aires",
+      "EZE",
+      "Ezeiza",
+      "Ministro Pistarini",
+      "Ministro Pistarini International Airport",
+      "SAEZ"
+    ],
+    "clue1": "Major airport serving Argentina’s capital.",
+    "clue2": "Known commonly as Ezeiza.",
+    "image": "assets/SAEZ.png"
+  },
+  {
+    "icao": "SBGR",
+    "iata": "GRU",
+    "name": "São Paulo/Guarulhos International Airport",
+    "city": "Sao Paulo",
+    "country": "BR",
+    "track": "international",
+    "aliases": [
+      "GRU",
+      "Guarulhos",
+      "SBGR",
+      "Sao Paulo",
+      "São Paulo",
+      "São Paulo/Guarulhos International Airport"
+    ],
+    "clue1": "Major airport in Brazil.",
+    "clue2": "Primary international gateway for São Paulo.",
+    "image": "assets/SBGR.png"
+  },
+  {
+    "icao": "SCEL",
+    "iata": "SCL",
+    "name": "Arturo Merino Benítez International Airport",
+    "city": "Santiago",
+    "country": "CL",
+    "track": "international",
+    "aliases": [
+      "Arturo Merino Benitez",
+      "Arturo Merino Benítez International Airport",
+      "SCEL",
+      "SCL",
+      "Santiago"
+    ],
+    "clue1": "Major airport in Chile.",
+    "clue2": "Primary airport serving Santiago.",
+    "image": "assets/SCEL.png"
+  },
+  {
+    "icao": "SKBO",
+    "iata": "BOG",
+    "name": "El Dorado International Airport",
+    "city": "Bogota",
+    "country": "CO",
+    "track": "international",
+    "aliases": [
+      "BOG",
+      "Bogota",
+      "Bogotá",
+      "El Dorado",
+      "El Dorado International Airport",
+      "SKBO"
+    ],
+    "clue1": "Major airport in Colombia.",
+    "clue2": "Primary airport serving Bogotá.",
+    "image": "assets/SKBO.png"
+  },
+  {
+    "icao": "SPJC",
+    "iata": "LIM",
+    "name": "Jorge Chávez International Airport",
+    "city": "Lima",
+    "country": "PE",
+    "track": "international",
+    "aliases": [
+      "Jorge Chavez",
+      "Jorge Chávez",
+      "Jorge Chávez International Airport",
+      "LIM",
+      "Lima",
+      "SPJC"
+    ],
+    "clue1": "Major airport in Peru.",
+    "clue2": "Primary airport serving Lima.",
+    "image": "assets/SPJC.png"
+  },
+  {
+    "icao": "TJSJ",
+    "iata": "SJU",
+    "name": "Luis Muñoz Marín International Airport",
+    "city": "San Juan",
+    "country": "PR",
+    "track": "international",
+    "aliases": [
+      "Luis Munoz Marin",
+      "Luis Muñoz Marín",
+      "Luis Muñoz Marín International Airport",
+      "SJU",
+      "San Juan",
+      "TJSJ"
+    ],
+    "clue1": "Major airport in Puerto Rico.",
+    "clue2": "Primary gateway for San Juan.",
+    "image": "assets/TJSJ.png"
+  },
+  {
+    "icao": "VHHH",
+    "iata": "HKG",
+    "name": "Hong Kong International Airport",
+    "city": "Hong Kong",
+    "country": "HK",
+    "track": "international",
+    "aliases": [
+      "HKG",
+      "Hong Kong",
+      "Hong Kong International Airport",
+      "VHHH"
+    ],
+    "clue1": "Major East Asian international airport.",
+    "clue2": "Located on Chek Lap Kok island.",
+    "image": "assets/VHHH.png"
+  },
+  {
+    "icao": "WSSS",
+    "iata": "SIN",
+    "name": "Singapore Changi Airport",
+    "city": "Singapore",
+    "country": "SG",
+    "track": "international",
+    "aliases": [
+      "Changi",
+      "SIN",
+      "Singapore",
+      "Singapore Changi",
+      "Singapore Changi Airport",
+      "WSSS"
+    ],
+    "clue1": "Major Southeast Asian global hub.",
+    "clue2": "Frequently ranked among the world’s best airports.",
+    "image": "assets/WSSS.png"
+  },
+  {
+    "icao": "YSSY",
+    "iata": "SYD",
+    "name": "Sydney Airport",
+    "city": "Sydney",
+    "country": "AU",
+    "track": "international",
+    "aliases": [
+      "SYD",
+      "Sydney",
+      "Sydney Airport",
+      "Sydney Kingsford Smith",
+      "YSSY"
+    ],
+    "clue1": "Major airport in Australia.",
+    "clue2": "Coastal airport serving Sydney.",
+    "image": "assets/YSSY.png"
   }
 ]

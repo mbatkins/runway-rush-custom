@@ -1,11 +1,18 @@
-# Runway Rush Fresh Launch
+# Runway Rush v2 Four Modes
 
-Static Vercel-ready game package.
+Ready for GitHub/Vercel static deployment.
 
-Includes:
-- `index.html`
-- `airports.json`
-- `logo.jpeg`
-- `/assets` with 55 custom screenshots
+Files:
+- index.html
+- airports.json
+- logo.jpeg
+- assets/*.png
 
-The PNG airport assets are copied from the top-level V5 folder only and are not edited.
+Modes:
+- Play Now
+- Domestic Trips
+- International Trips
+- Duty Time Limit (10 Seconds • No Clues)
+
+Attribution:
+© OpenStreetMap contributors
