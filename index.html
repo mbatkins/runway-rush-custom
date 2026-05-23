@@ -98,7 +98,12 @@ function submitGuess(){const a=deck[current%deck.length];const guess=document.ge
 function revealClue(label,text){const id=label==="Clue 1"?"clue1":"clue2";const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").textContent="Try again.";document.getElementById("msg").className="msg bad";}
 function nextAirport(){current++;document.getElementById("correct").classList.add("hidden");document.getElementById("game").classList.remove("hidden");loadAirport();}
 function gameOver(a){document.getElementById("game").classList.add("hidden");document.getElementById("over").classList.remove("hidden");document.getElementById("finalAnswer").textContent=a.name+" ("+a.iata+")";document.getElementById("final").textContent=streak;document.getElementById("finalText").textContent=streak;document.getElementById("emoji").textContent=result.join("");}
-function shareScore(){const txt="Runway Rush #"+dayNumber+"\\n"+result.join("")+"\\n✈️ "+streak+" airports guessed\\nhttps://runway-rush.vercel.app/";if(navigator.share){navigator.share({text:txt});}else{navigator.clipboard.writeText(txt);alert("Score copied to clipboard.");}}
+function shareScore(){const txt =
+  "Runway Rush #" + dayNumber + "\n" +
+  result.join("") + "\n" +
+  "I guessed " + streak + " airports ✈️\n" +
+  "Can you beat me?\n" +
+  "https://runway-rush.vercel.app/";/";if(navigator.share){navigator.share({text:txt});}else{navigator.clipboard.writeText(txt);alert("Score copied to clipboard.");}}
 function playAgain(){startGame();}
 </script>
 </body>
