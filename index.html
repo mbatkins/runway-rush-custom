@@ -148,7 +148,13 @@ function shareScore(){
   const txt=MODE_INFO[mode].title+"\n"+MODE_INFO[mode].label+"\n"+result.join("")+"\nI guessed "+streak+" "+MODE_INFO[mode].share+" ✈️\nCan you beat me?\nhttps://www.runway-rush.com/";
   if(navigator.share){navigator.share({text:txt});}else{navigator.clipboard.writeText(txt);alert("Score copied to clipboard.");}
 }
-function playAgain(){startGame(mode);}
+function playAgain(){
+  clearTimer();
+  document.getElementById("over").classList.add("hidden");
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("correct").classList.add("hidden");
+  document.getElementById("home").classList.remove("hidden");
+}
 </script>
 </body>
 </html>
