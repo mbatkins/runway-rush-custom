@@ -116,17 +116,30 @@ function startGame(selectedMode="mixed"){
   "KDFW","KCLT","KPHL","KMIA","KPHX",
   "KJFK","KBOS","KLGA",
   "KSEA","KPDX","KANC",
-  "KBWI","KMDW","KHOU","KDAL",
-  "KMCO","KFLL","KLAS","KSAN"
+  "KBWI","KMDW","KHOU","KDAL"
 ];
 
-const hubAirports = pool.filter(a => HUBS.includes(a.icao));
-const otherAirports = pool.filter(a => !HUBS.includes(a.icao));
+if (mode === "mixed" || mode === "domestic") {
+  const hubAirports = pool.filter(a => HUBS.includes(a.icao));
+  const otherAirports = pool.filter(a => !HUBS.includes(a.icao));
 
-const shuffledHubs = seededShuffle(hubAirports, "HUBS-"+dateKey()+"-"+mode);
-const shuffledOthers = seededShuffle(otherAirports, "REST-"+dateKey()+"-"+mode);
+  const firstHub = seededShuffle(
+    hubAirports,
+    "FIRST-HUB-"+MODE_INFO[mode].seed+"-"+dateKey()
+  )[0];
 
-deck = [...shuffledHubs, ...shuffledOthers];
+  const shuffledOthers = seededShuffle(
+    otherAirports,
+    "REST-"+MODE_INFO[mode].seed+"-"+dateKey()
+  );
+
+  deck = [firstHub, ...shuffledOthers];
+} else {
+  deck = seededShuffle(
+    pool,
+    "RUNWAY-RUSH-"+MODE_INFO[mode].seed+"-"+dateKey()
+  );
+}
   current=0;streak=0;misses=0;result=[];
   ["home","correct","over"].forEach(id=>document.getElementById(id).classList.add("hidden"));
   document.getElementById("game").classList.remove("hidden");
