@@ -106,6 +106,14 @@ function seededShuffle(arr,seed){let a=[...arr],x=2166136261;for(let i=0;i<seed.
 async function init(){airports=await fetch("airports.json?v="+Date.now()).then(r=>r.json());dayNumber=dayIndex();}
 init();
 function showHow(){const h=document.getElementById("how");h.style.display=h.style.display==="block"?"none":"block";}
+function goHome(){
+  clearTimer();
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("correct").classList.add("hidden");
+  document.getElementById("over").classList.add("hidden");
+  document.getElementById("how").style.display="none";
+  document.getElementById("home").classList.remove("hidden");
+} 
 function poolForMode(m){if(m==="domestic")return airports.filter(a=>a.track==="domestic");if(m==="international")return airports.filter(a=>a.track==="international");return airports;}
 function startGame(selectedMode="mixed"){
   if(!airports.length){setTimeout(()=>startGame(selectedMode),100);return;}
