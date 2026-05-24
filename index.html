@@ -110,7 +110,23 @@ function poolForMode(m){if(m==="domestic")return airports.filter(a=>a.track==="d
 function startGame(selectedMode="mixed"){
   if(!airports.length){setTimeout(()=>startGame(selectedMode),100);return;}
   clearTimer();mode=selectedMode;const pool=poolForMode(mode);
-  deck=seededShuffle(pool,"RUNWAY-RUSH-"+MODE_INFO[mode].seed+"-"+dateKey());
+  const HUBS = [
+  "KATL","KDTW","KMSP","KSLC",
+  "KORD","KDEN","KIAH","KEWR","KIAD","KSFO","KLAX",
+  "KDFW","KCLT","KPHL","KMIA","KPHX",
+  "KJFK","KBOS","KLGA",
+  "KSEA","KPDX","KANC",
+  "KBWI","KMDW","KHOU","KDAL",
+  "KMCO","KFLL","KLAS","KSAN"
+];
+
+const hubAirports = pool.filter(a => HUBS.includes(a.icao));
+const otherAirports = pool.filter(a => !HUBS.includes(a.icao));
+
+const shuffledHubs = seededShuffle(hubAirports, "HUBS-"+dateKey()+"-"+mode);
+const shuffledOthers = seededShuffle(otherAirports, "REST-"+dateKey()+"-"+mode);
+
+deck = [...shuffledHubs, ...shuffledOthers];
   current=0;streak=0;misses=0;result=[];
   ["home","correct","over"].forEach(id=>document.getElementById(id).classList.add("hidden"));
   document.getElementById("game").classList.remove("hidden");
