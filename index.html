@@ -185,7 +185,7 @@ function submitGuess(){
   }else{
     if(mode==="timed"){clearTimer();result.push("🟥");gameOver(a);return;}
     misses++;document.getElementById("attempts").textContent="MISS "+misses+"/3";
-    if(misses===1)revealClue("clue1","Clue 1",a.clue1);else if(misses===2)revealClue("clue2","Clue 2",a.clue2);else{result.push("🟥");gameOver(a);}
+    if(misses===1)revealClue("clue1","Clue 1",a.geo_clue);else if(misses===2)revealClue("clue2","Clue 2",a.ops_clue);else{result.push("🟥");gameOver(a);}
   }
 }
 function revealClue(id,label,text){const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").textContent="Try again.";document.getElementById("msg").className="msg bad";}
