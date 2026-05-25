@@ -199,8 +199,34 @@ function getRank(score){
 function nextAirport(){current++;document.getElementById("correct").classList.add("hidden");document.getElementById("game").classList.remove("hidden");loadAirport();}
 function gameOver(a){clearTimer();document.getElementById("game").classList.add("hidden");document.getElementById("over").classList.remove("hidden");document.getElementById("finalAnswer").textContent=a.name+" ("+a.iata+")";document.getElementById("finalText").textContent=streak;document.getElementById("emoji").textContent=result.join("");}
 function shareScore(){
-  const txt=MODE_INFO[mode].title+"\n"+MODE_INFO[mode].label+"\n"+result.join("")+"\nI guessed "+streak+" "+MODE_INFO[mode].share+" ✈️\nCan you beat me?\nhttps://www.runway-rush.com/";
-  if(navigator.share){navigator.share({text:txt});}else{navigator.clipboard.writeText(txt);alert("Score copied to clipboard.");}
+  const modeLabel =
+    mode === "timed" ? "Timed" :
+    mode === "domestic" ? "Domestic" :
+    mode === "international" ? "International" :
+    "Classic";
+
+  const failText =
+    mode === "timed"
+      ? `Today I identified ${streak} airports before time ran out.`
+      : `Today I identified ${streak} airports before striking out.`;
+
+  const txt =
+`Runway Rush ✈️ (${modeLabel})
+${result.join("")}
+
+Rank: ${getRank(streak)}
+
+${failText}
+Can you beat me?
+
+https://www.runway-rush.com`;
+
+  if(navigator.share){
+    navigator.share({ text: txt });
+  } else {
+    navigator.clipboard.writeText(txt);
+    alert("Score copied to clipboard.");
+  }
 }
 function playAgain(){
   clearTimer();
