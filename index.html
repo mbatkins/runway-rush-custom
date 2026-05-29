@@ -38,7 +38,19 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
 .primary{background:white;color:#08182f}
 .secondary{background:#18365f;color:white;border:1px solid rgba(255,255,255,.1)}
 .clue{display:none;margin-top:14px;background:#18365f;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;text-align:left;color:#eef6ff}.clue b{color:white}
-.msg{min-height:24px;margin-top:12px;font-weight:750}.bad{color:var(--bad)}
+.msg{
+  min-height:24px;
+  margin-top:12px;
+  font-weight:750;
+  padding:12px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.bad{
+  color:#fff;
+  background:#8b0000;
+}
 .hidden{display:none}.emoji{font-size:30px;letter-spacing:2px;line-height:1.4;word-break:break-word;margin:18px 0}
 .answer{font-size:22px;color:#fff;font-weight:850;margin:12px 0}.small{font-size:13px;color:var(--muted)}
 .footer{margin-top:24px;text-align:center;color:var(--muted);font-size:12px}
@@ -190,7 +202,8 @@ function submitGuess(){
     if(misses===1)revealClue("clue1","Clue 1",a.geo_clue);else if(misses===2)revealClue("clue2","Clue 2",a.ops_clue);else{result.push("🟥");gameOver(a);}
   }
 }
-function revealClue(id,label,text){const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").textContent="Try again.";document.getElementById("msg").className="msg bad";}
+function revealClue(id,label,text){const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").innerHTML =
+  "❌ <b>Incorrect</b> &nbsp;&nbsp; 💡 Clue Revealed Below";document.getElementById("msg").className="msg bad";}
 function getRank(score){
   if(score >= 20) return "Veteran Aviator 🛫";
   if(score >= 12) return "Ready for the Left Seat 👨‍✈️";
