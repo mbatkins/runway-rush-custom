@@ -117,6 +117,9 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
 
 <script>
 let airports=[], deck=[], current=0, streak=0, misses=0, result=[], dayNumber=0, mode="mixed", timerId=null, timeLeft=10;
+
+let playerId = "";
+let displayName = "";
 const MODE_INFO={
   mixed:{title:"Runway Rush ✈️",label:"PLAY NOW",seed:"MIXED",pool:"airports",share:"airports"},
   domestic:{title:"Runway Rush 🇺🇸",label:"DOMESTIC TRIPS",seed:"DOMESTIC",pool:"domestic airports",share:"domestic airports"},
@@ -127,7 +130,50 @@ function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\
 function dateKey(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
 function dayIndex(){const start=new Date(2024,0,1);const now=new Date();return Math.floor((new Date(now.getFullYear(),now.getMonth(),now.getDate())-start)/86400000);}
 function seededShuffle(arr,seed){let a=[...arr],x=2166136261;for(let i=0;i<seed.length;i++){x^=seed.charCodeAt(i);x=Math.imul(x,16777619)>>>0;}for(let i=a.length-1;i>0;i--){x=(Math.imul(1664525,x)+1013904223)>>>0;let j=x%(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
-async function init(){airports=await fetch("airports.json?v="+Date.now()).then(r=>r.json());dayNumber=dayIndex();}
+function generatePlayerId() {
+  return "rr_" + Math.random().toString(36).substring(2) +
+         Date.now().toString(36);
+}
+
+function initializePlayer() {
+
+  playerId = localStorage.getItem("rrPlayerId");
+
+  if (!playerId) {
+    playerId = generatePlayerId();
+    localStorage.setItem("rrPlayerId", playerId);
+  }
+
+  displayName = localStorage.getItem("rrDisplayName");
+
+  if (!displayName) {
+
+    while (!displayName) {
+
+      displayName = prompt(
+        "Choose a display name for the leaderboard (3-20 characters)"
+      );
+
+      if (!displayName) continue;
+
+      displayName = displayName.trim();
+
+      if (displayName.length < 3 || displayName.length > 20) {
+        displayName = "";
+      }
+    }
+
+    localStorage.setItem("rrDisplayName", displayName);
+  }
+}
+async function init(){
+
+  initializePlayer();
+
+  airports=await fetch("airports.json?v="+Date.now()).then(r=>r.json());
+
+  dayNumber=dayIndex();
+}
 init();
 function showHow(){const h=document.getElementById("how");h.style.display=h.style.display==="block"?"none":"block";}
 function goHome(){
