@@ -9,12 +9,7 @@ export default async function handler(req, res) {
   }
 
   const cleanName = String(displayName).trim().slice(0, 20);
-
-  const banned = [
-    "hitler","nazi","kkk","whitepower","fuck","shit","bitch","asshole",
-    "admin","administrator","moderator","alpa","united airlines"
-  ];
-
+  const banned = ["hitler","nazi","kkk","whitepower","fuck","shit","bitch","asshole","admin","administrator","moderator","alpa","united airlines"];
   const normalized = cleanName.toLowerCase().replace(/[^a-z0-9]/g, "");
 
   if (cleanName.length < 3 || banned.some(word => normalized.includes(word.replace(/[^a-z0-9]/g, "")))) {
@@ -27,10 +22,7 @@ export default async function handler(req, res) {
   async function redis(command) {
     const r = await fetch(url, {
       method: "POST",
-      headers: {
-        Authorization: `Bearer ${token}`,
-        "Content-Type": "application/json"
-      },
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
       body: JSON.stringify(command)
     });
     return r.json();
@@ -40,20 +32,24 @@ export default async function handler(req, res) {
   const allTimeKey = `rr:alltime:${mode}`;
   const playerKey = `rr:player:${playerId}:${mode}`;
   const todayPlayerKey = `rr:playerday:${date}:${mode}:${playerId}`;
+  const daysKey = `rr:days:${mode}:${playerId}`;
 
   const oldToday = await redis(["GET", todayPlayerKey]);
-  const oldScore = oldToday.result ? Number(oldToday.result) : 0;
+  const hasOld = oldToday.result !== null && oldToday.result !== undefined;
+  const oldScore = hasOld ? Number(oldToday.result) : 0;
 
-  if (score > oldScore) {
+  if (!hasOld || score > oldScore) {
     await redis(["ZADD", todayKey, score, playerId]);
     await redis(["SET", todayPlayerKey, score]);
   }
 
-  const delta = Math.max(0, score - oldScore);
+  const delta = hasOld ? Math.max(0, score - oldScore) : score;
+
   if (delta > 0) {
     await redis(["ZINCRBY", allTimeKey, delta, playerId]);
   }
 
+  await redis(["SADD", daysKey, date]);
   await redis(["HSET", playerKey, "name", cleanName, "lastPlayed", date]);
   await redis(["EXPIRE", todayKey, 60 * 60 * 48]);
 
