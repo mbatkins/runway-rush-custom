@@ -168,7 +168,9 @@ function initializePlayer() {
 }
 async function init(){
 
-  initializePlayer();
+  playerId = localStorage.getItem("rrPlayerId") || "";
+
+  displayName = localStorage.getItem("rrDisplayName") || "";
 
   airports=await fetch("airports.json?v="+Date.now()).then(r=>r.json());
 
