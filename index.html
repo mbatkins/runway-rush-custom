@@ -55,10 +55,18 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
 .answer{font-size:22px;color:#fff;font-weight:850;margin:12px 0}.small{font-size:13px;color:var(--muted)}
 .footer{margin-top:24px;text-align:center;color:var(--muted);font-size:12px}
 .footer-credit{text-align:center;font-size:11px;color:rgba(255,255,255,0.55);margin-top:6px;padding-bottom:10px}
+.wrap.wide{max-width:1100px}
+.over-grid{display:grid;gap:16px;margin-top:16px}
+.board-card{background:#18365f;border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:16px}
+.board-card h3{font-size:18px;margin:0 0 12px;text-align:left}
+.board-row{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08);color:#eef6ff;font-weight:750}
+.board-row.me{background:rgba(74,222,128,.18);border-radius:8px;padding:7px 8px}
+.player-meta{color:var(--muted);font-size:14px;line-height:1.6}
+@media(min-width:900px){.over-grid{grid-template-columns:1fr 1fr 1fr}}
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="wrap" id="appWrap">
   <img class="logo" src="logo.jpeg" alt="Runway Rush logo" onclick="goHome()" style="cursor:pointer;"/>
   <div class="brand">DAILY PILOT STREAK CHALLENGE</div>
 
@@ -102,44 +110,34 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
   </section>
 
 <section id="over" class="panel hidden">
-  <h2>❌ Not quite.</h2>
+  <div class="over-grid">
 
-  <p>Correct Answer:</p>
-  <div id="finalAnswer" class="answer"></div>
+    <div class="board-card">
+      <h2>❌ Not quite.</h2>
+      <p>Correct Answer:</p>
+      <div id="finalAnswer" class="answer"></div>
+      <h2>You got <span id="finalText">0</span> right today.</h2>
+      <div id="playerRank" class="answer"></div>
+      <div id="playerStats" class="player-meta"></div>
+      <div id="emoji" class="emoji"></div>
 
-  <h2>You got <span id="finalText">0</span> right today.</h2>
+      <div id="leaderboardJoin" class="hidden">
+        <h3>Join the Leaderboard</h3>
+        <p>See how you stack up against other pilots.</p>
+        <input id="leaderboardName" maxlength="20" placeholder="Display Name"/>
+        <button class="primary" onclick="saveLeaderboardName()">JOIN LEADERBOARD</button>
+      </div>
+    </div>
 
-  <div id="playerRank" class="answer"></div>
+    <div class="board-card">
+      <h3>Today's Top Pilots</h3>
+      <div id="todayBoard">Loading standings...</div>
+    </div>
 
-  <div id="emoji" class="emoji"></div>
-
-  <div id="leaderboardJoin" class="hidden">
-    <h3>Join the Leaderboard</h3>
-
-    <p>See how you stack up against other pilots.</p>
-
-    <input
-      id="leaderboardName"
-      maxlength="20"
-      placeholder="Display Name"
-    />
-
-    <button class="primary" onclick="saveLeaderboardName()">
-      JOIN LEADERBOARD
-    </button>
-  </div>
-
-  <div id="leaderboards" class="hidden">
-
-    <h3>Today's Top Pilots</h3>
-
-    <div id="todayBoard" class="small"></div>
-
-    <br>
-
-    <h3>All-Time Standings</h3>
-
-    <div id="allTimeBoard" class="small"></div>
+    <div class="board-card">
+      <h3>All-Time Standings</h3>
+      <div id="allTimeBoard">Loading standings...</div>
+    </div>
 
   </div>
 
@@ -217,6 +215,7 @@ function showHow(){const h=document.getElementById("how");h.style.display=h.styl
 function goHome(){
   clearTimer();
   document.getElementById("game").classList.add("hidden");
+  document.getElementById("appWrap").classList.remove("wide");
   document.getElementById("correct").classList.add("hidden");
   document.getElementById("over").classList.add("hidden");
   document.getElementById("how").style.display="none";
@@ -258,6 +257,7 @@ if (mode === "mixed" || mode === "domestic") {
 }
   current=0;streak=0;misses=0;result=[];
   ["home","correct","over"].forEach(id=>document.getElementById(id).classList.add("hidden"));
+  document.getElementById("appWrap").classList.remove("wide");
   document.getElementById("game").classList.remove("hidden");
   loadAirport();
 }
@@ -325,6 +325,95 @@ function saveLeaderboardName(){
     "Leaderboard profile created. Score submission comes next."
   );
 }
+let lastFinalScore = 0;
+
+function ensurePlayerId(){
+  if(!playerId){
+    playerId = generatePlayerId();
+    localStorage.setItem("rrPlayerId", playerId);
+  }
+}
+
+function validDisplayName(name){
+  const clean = String(name || "").trim();
+  const banned = ["hitler","nazi","kkk","whitepower","fuck","shit","bitch","asshole","admin","administrator","moderator","alpa","united airlines"];
+  const normalized = clean.toLowerCase().replace(/[^a-z0-9]/g,"");
+  if(clean.length < 3 || clean.length > 20) return false;
+  return !banned.some(w => normalized.includes(w.replace(/[^a-z0-9]/g,"")));
+}
+
+async function submitScoreAndLoad(){
+  if(!displayName) return loadLeaderboards();
+
+  ensurePlayerId();
+
+  await fetch("/api/submit-score",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      playerId,
+      displayName,
+      mode,
+      score:lastFinalScore
+    })
+  });
+
+  await loadLeaderboards();
+}
+
+async function loadLeaderboards(){
+  try{
+    const url = "/api/leaderboard?mode="+encodeURIComponent(mode)+(playerId ? "&playerId="+encodeURIComponent(playerId) : "");
+    const r = await fetch(url);
+    const data = await r.json();
+
+    renderBoard("todayBoard", data.today || []);
+    renderBoard("allTimeBoard", data.allTime || []);
+
+    if(displayName){
+      document.getElementById("playerStats").innerHTML =
+        `Playing as: <b>${displayName}</b><br>`+
+        `Today's Rank: <b>${data.todayRank ? "#"+data.todayRank : "Unranked"}</b><br>`+
+        `All-Time Rank: <b>${data.allTimeRank ? "#"+data.allTimeRank : "Unranked"}</b><br>`+
+        `All-Time Points: <b>${data.allTimePoints || 0}</b><br>`+
+        `Days Played: <b>${data.daysPlayed || 0}</b>`;
+    }
+  }catch(e){
+    document.getElementById("todayBoard").textContent="Unable to load standings.";
+    document.getElementById("allTimeBoard").textContent="Unable to load standings.";
+  }
+}
+
+function renderBoard(id, rows){
+  const el=document.getElementById(id);
+  if(!rows.length){
+    el.innerHTML="No scores yet.";
+    return;
+  }
+
+  el.innerHTML = rows.map((p,i)=>{
+    const me = playerId && p.id === playerId ? " me" : "";
+    return `<div class="board-row${me}"><span>#${i+1} ${p.name}</span><span>${p.score}</span></div>`;
+  }).join("");
+}
+
+async function saveLeaderboardName(){
+  const name=document.getElementById("leaderboardName").value.trim();
+
+  if(!validDisplayName(name)){
+    alert("That display name is not allowed. Please choose another.");
+    return;
+  }
+
+  displayName=name;
+  localStorage.setItem("rrDisplayName", displayName);
+  ensurePlayerId();
+
+  document.getElementById("leaderboardJoin").classList.add("hidden");
+  document.getElementById("playerStats").innerHTML="Saving score...";
+
+  await submitScoreAndLoad();
+}
   function getRank(score){
   if(score >= 20) return "Veteran Aviator 🛫";
   if(score >= 12) return "Ready for the Left Seat 👨‍✈️";
@@ -334,62 +423,30 @@ function saveLeaderboardName(){
 }
 function nextAirport(){current++;document.getElementById("correct").classList.add("hidden");document.getElementById("game").classList.remove("hidden");loadAirport();}
 function gameOver(a){
-
   clearTimer();
 
-  document
-    .getElementById("game")
-    .classList
-    .add("hidden");
+  lastFinalScore = streak;
 
-  document
-    .getElementById("over")
-    .classList
-    .remove("hidden");
+  document.getElementById("appWrap").classList.add("wide");
+  document.getElementById("game").classList.add("hidden");
+  document.getElementById("over").classList.remove("hidden");
 
-  document
-    .getElementById("finalAnswer")
-    .textContent =
-      a.name + " (" + a.iata + ")";
+  document.getElementById("finalAnswer").textContent=a.name+" ("+a.iata+")";
+  document.getElementById("finalText").textContent=streak;
+  document.getElementById("emoji").textContent=result.join("");
+  document.getElementById("playerRank").textContent="Rank: "+getRank(streak);
 
-  document
-    .getElementById("finalText")
-    .textContent =
-      streak;
+  document.getElementById("todayBoard").textContent="Loading standings...";
+  document.getElementById("allTimeBoard").textContent="Loading standings...";
 
-  document
-    .getElementById("emoji")
-    .textContent =
-      result.join("");
-
-  document
-    .getElementById("playerRank")
-    .textContent =
-      "Rank: " + getRank(streak);
-
-  if(!displayName){
-
-    document
-      .getElementById("leaderboardJoin")
-      .classList
-      .remove("hidden");
-
-    document
-      .getElementById("leaderboards")
-      .classList
-      .add("hidden");
-
-  } else {
-
-    document
-      .getElementById("leaderboardJoin")
-      .classList
-      .add("hidden");
-
-    document
-      .getElementById("leaderboards")
-      .classList
-      .remove("hidden");
+  if(displayName){
+    document.getElementById("leaderboardJoin").classList.add("hidden");
+    document.getElementById("playerStats").innerHTML="Saving score...";
+    submitScoreAndLoad();
+  }else{
+    document.getElementById("leaderboardJoin").classList.remove("hidden");
+    document.getElementById("playerStats").innerHTML="Enter a display name to join the standings.";
+    loadLeaderboards();
   }
 }
 function shareScore(){
@@ -424,6 +481,7 @@ https://www.runway-rush.com`;
 }
 function playAgain(){
   clearTimer();
+  document.getElementById("appWrap").classList.remove("wide");
   document.getElementById("over").classList.add("hidden");
   document.getElementById("game").classList.add("hidden");
   document.getElementById("correct").classList.add("hidden");
