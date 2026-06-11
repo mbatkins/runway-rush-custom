@@ -235,20 +235,61 @@ function startGame(selectedMode="mixed"){
 ];
 
 if (mode === "mixed" || mode === "domestic") {
-  const hubAirports = pool.filter(a => HUBS.includes(a.icao));
-  const otherAirports = pool.filter(a => !HUBS.includes(a.icao));
 
-  const firstHub = seededShuffle(
-    hubAirports,
-    "FIRST-HUB-"+MODE_INFO[mode].seed+"-"+dateKey()
-  )[0];
+  const TIER1 = [
+    "KATL","KORD","KDEN","KDFW","KLAX",
+    "KIAH","KEWR","KIAD","KSFO","KPHX",
+    "KSEA","KDTW","KMSP","KCLT","KMIA",
+    "KJFK","KBOS","KLGA","KPHL","KSLC",
+    "KBWI","KMDW","KHOU","KDAL","KPDX"
+  ];
 
-  const shuffledOthers = seededShuffle(
-    otherAirports,
-    "REST-"+MODE_INFO[mode].seed+"-"+dateKey()
+  const TIER2 = [
+    "KBNA","KMCI","KOAK","KSJC","KRDU",
+    "KPBI","KJAX","KOMA","KTUL","KSNA",
+    "KBUR","KSMF","KCMH","KCLE","KMKE",
+    "KSAT","KABQ","KIND","KPIT","KCVG",
+    "KRIC","KORF","KOKC","KBOI","KTUS"
+  ];
+
+  const tier1 = pool.filter(a => TIER1.includes(a.icao));
+  const tier2 = pool.filter(a => TIER2.includes(a.icao));
+
+  const used = new Set([
+    ...tier1.map(a => a.icao),
+    ...tier2.map(a => a.icao)
+  ]);
+
+  const chaos = pool.filter(a => !used.has(a.icao));
+
+  const firstFive = seededShuffle(
+    tier1,
+    "TIER1-"+dateKey()
+  ).slice(0,5);
+
+  const nextFive = seededShuffle(
+    tier2,
+    "TIER2-"+dateKey()
+  ).slice(0,5);
+
+  const everythingElse = seededShuffle(
+    chaos,
+    "CHAOS-"+dateKey()
   );
 
-  deck = [firstHub, ...shuffledOthers];
+  deck = [
+    ...firstFive,
+    ...nextFive,
+    ...everythingElse
+  ];
+
+} else {
+
+  deck = seededShuffle(
+    pool,
+    "RUNWAY-RUSH-"+MODE_INFO[mode].seed+"-"+dateKey()
+  );
+
 } else {
   deck = seededShuffle(
     pool,
