@@ -106,7 +106,7 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
     <h2>✅ Correct!</h2>
     <div id="correctAnswer" class="answer"></div>
     <p>Current streak: <b id="correctStreak"></b></p>
-    <button class="primary" onclick="nextAirport()">NEXT AIRPORT</button>
+    <button id="nextAirportBtn" class="primary" onclick="nextAirport()">NEXT AIRPORT</button>
   </section>
 
 <section id="over" class="panel hidden">
@@ -533,14 +533,13 @@ document.addEventListener("keydown", function(event) {
   if (event.key !== "Enter") return;
 
   const correctVisible =
-
     !document.getElementById("correct").classList.contains("hidden");
 
-  if (correctVisible && canAdvanceWithEnter) {
+  if (correctVisible) {
 
     event.preventDefault();
 
-    nextAirport();
+    document.getElementById("nextAirportBtn").click();
 
   }
 
