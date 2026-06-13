@@ -1,12 +1,22 @@
 export default async function handler(req, res) {
   const mode = req.query.mode || "mixed";
   const playerId = req.query.playerId || "";
-  const date = new Intl.DateTimeFormat(
-  "en-CA",
-  {
-    timeZone: "America/Chicago"
-  }
-).format(new Date());
+  function chicagoDate() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+
+  const y = parts.find(p => p.type === "year").value;
+  const m = parts.find(p => p.type === "month").value;
+  const d = parts.find(p => p.type === "day").value;
+
+  return `${y}-${m}-${d}`;
+}
+
+const date = chicagoDate();
 
   const url = process.env.KV_REST_API_URL;
   const token = process.env.KV_REST_API_TOKEN;
