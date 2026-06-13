@@ -161,7 +161,20 @@ const MODE_INFO={
   timed:{title:"Runway Rush ⏱️",label:"DUTY TIME LIMIT",seed:"TIMED",pool:"airports",share:"airports in Duty Time Limit"}
 };
 function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/international airport/g,"").replace(/airport/g,"").replace(/[^a-z0-9]/g,"").trim();}
-function dateKey(){const d=new Date();return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+function dateKey() {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "America/Chicago",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit"
+  }).formatToParts(new Date());
+
+  const y = parts.find(p => p.type === "year").value;
+  const m = parts.find(p => p.type === "month").value;
+  const d = parts.find(p => p.type === "day").value;
+
+  return `${y}-${m}-${d}`;
+}
 function dayIndex(){const start=new Date(2024,0,1);const now=new Date();return Math.floor((new Date(now.getFullYear(),now.getMonth(),now.getDate())-start)/86400000);}
 function seededShuffle(arr,seed){let a=[...arr],x=2166136261;for(let i=0;i<seed.length;i++){x^=seed.charCodeAt(i);x=Math.imul(x,16777619)>>>0;}for(let i=a.length-1;i>0;i--){x=(Math.imul(1664525,x)+1013904223)>>>0;let j=x%(i+1);[a[i],a[j]]=[a[j],a[i]];}return a;}
 function generatePlayerId() {
