@@ -526,6 +526,8 @@ https://www.runway-rush.com`;
     alert("Score copied to clipboard.");
   }
 }
+let canAdvanceWithEnter = false;
+
 document.addEventListener("keydown", function(event) {
 
   if (event.key !== "Enter") return;
@@ -534,7 +536,7 @@ document.addEventListener("keydown", function(event) {
 
     !document.getElementById("correct").classList.contains("hidden");
 
-  if (correctVisible) {
+  if (correctVisible && canAdvanceWithEnter) {
 
     event.preventDefault();
 
