@@ -1,7 +1,12 @@
 export default async function handler(req, res) {
   const mode = req.query.mode || "mixed";
   const playerId = req.query.playerId || "";
-  const date = new Date().toISOString().slice(0, 10);
+  const date = new Intl.DateTimeFormat(
+  "en-CA",
+  {
+    timeZone: "America/Chicago"
+  }
+).format(new Date());
 
   const url = process.env.KV_REST_API_URL;
   const token = process.env.KV_REST_API_TOKEN;
