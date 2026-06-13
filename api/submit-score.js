@@ -1,13 +1,25 @@
 export default async function handler(req, res) {
-  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
+  if (req.method !== "POST") {
+    return res.status(405).json({ error: "Method not allowed" });
+  }
+
+  function chicagoDate() {
+    const parts = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago",
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    }).formatToParts(new Date());
+
+    const y = parts.find(p => p.type === "year").value;
+    const m = parts.find(p => p.type === "month").value;
+    const d = parts.find(p => p.type === "day").value;
+
+    return `${y}-${m}-${d}`;
+  }
 
   const { playerId, displayName, mode, score } = req.body || {};
-  const date = new Intl.DateTimeFormat(
-  "en-CA",
-  {
-    timeZone: "America/Chicago"
-  }
-).format(new Date());
+  const date = chicagoDate();
 
   if (!playerId || !displayName || !mode || typeof score !== "number") {
     return res.status(400).json({ error: "Missing required fields" });
@@ -27,7 +39,10 @@ export default async function handler(req, res) {
   async function redis(command) {
     const r = await fetch(url, {
       method: "POST",
-      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
+      headers: {
+        Authorization: `Bearer ${token}`,
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify(command)
     });
     return r.json();
@@ -39,42 +54,34 @@ export default async function handler(req, res) {
   const todayPlayerKey = `rr:playerday:${date}:${mode}:${playerId}`;
   const daysKey = `rr:days:${mode}:${playerId}`;
 
+  await redis(["HSET", playerKey, "name", cleanName, "lastPlayed", date]);
+
   const oldToday = await redis(["GET", todayPlayerKey]);
+  const alreadyPlayedToday = oldToday.result !== null && oldToday.result !== undefined;
 
-const alreadyPlayedToday =
-  oldToday.result !== null &&
-  oldToday.result !== undefined;
+  if (alreadyPlayedToday) {
+    const originalScore = Number(oldToday.result);
 
-if (alreadyPlayedToday) {
-  return res.status(200).json({
-    ok: true,
-    ignored: true
-  });
-}
+    await redis(["ZADD", todayKey, originalScore, playerId]);
+    await redis(["EXPIRE", todayKey, 60 * 60 * 72]);
 
-await redis([
-  "ZADD",
-  todayKey,
-  score,
-  playerId
-]);
+    return res.status(200).json({
+      ok: true,
+      ignored: true,
+      score: originalScore
+    });
+  }
 
-await redis([
-  "SET",
-  todayPlayerKey,
-  score
-]);
+  await redis(["ZADD", todayKey, score, playerId]);
+  await redis(["SET", todayPlayerKey, score]);
+  await redis(["EXPIRE", todayPlayerKey, 60 * 60 * 72]);
 
-await redis([
-  "ZINCRBY",
-  allTimeKey,
-  score,
-  playerId
-]);
+  if (score > 0) {
+    await redis(["ZINCRBY", allTimeKey, score, playerId]);
+  }
 
   await redis(["SADD", daysKey, date]);
-  await redis(["HSET", playerKey, "name", cleanName, "lastPlayed", date]);
-  await redis(["EXPIRE", todayKey, 60 * 60 * 48]);
+  await redis(["EXPIRE", todayKey, 60 * 60 * 72]);
 
-  res.status(200).json({ ok: true });
+  res.status(200).json({ ok: true, score });
 }
