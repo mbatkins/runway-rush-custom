@@ -35,19 +35,37 @@ export default async function handler(req, res) {
   const daysKey = `rr:days:${mode}:${playerId}`;
 
   const oldToday = await redis(["GET", todayPlayerKey]);
-  const hasOld = oldToday.result !== null && oldToday.result !== undefined;
-  const oldScore = hasOld ? Number(oldToday.result) : 0;
 
-  if (!hasOld || score > oldScore) {
-    await redis(["ZADD", todayKey, score, playerId]);
-    await redis(["SET", todayPlayerKey, score]);
-  }
+const alreadyPlayedToday =
+  oldToday.result !== null &&
+  oldToday.result !== undefined;
 
-  const delta = hasOld ? Math.max(0, score - oldScore) : score;
+if (alreadyPlayedToday) {
+  return res.status(200).json({
+    ok: true,
+    ignored: true
+  });
+}
 
-  if (delta > 0) {
-    await redis(["ZINCRBY", allTimeKey, delta, playerId]);
-  }
+await redis([
+  "ZADD",
+  todayKey,
+  score,
+  playerId
+]);
+
+await redis([
+  "SET",
+  todayPlayerKey,
+  score
+]);
+
+await redis([
+  "ZINCRBY",
+  allTimeKey,
+  score,
+  playerId
+]);
 
   await redis(["SADD", daysKey, date]);
   await redis(["HSET", playerKey, "name", cleanName, "lastPlayed", date]);
