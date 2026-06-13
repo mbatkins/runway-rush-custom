@@ -151,7 +151,7 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
 
 <script>
 let airports=[], deck=[], current=0, streak=0, misses=0, result=[], dayNumber=0, mode="mixed", timerId=null, timeLeft=10;
-
+let correctScreenShownAt = 0;
 let playerId = "";
 let displayName = "";
 const MODE_INFO={
@@ -325,7 +325,7 @@ function submitGuess(){
   const a=deck[current%deck.length];const guess=document.getElementById("guess").value;if(!norm(guess))return;
   if(isCorrectGuess(guess,a)){
     clearTimer();streak++;result.push(mode==="timed"?"✅":misses===0?"🟩":misses===1?"🟨":"🟧");
-    document.getElementById("game").classList.add("hidden");document.getElementById("correct").classList.remove("hidden");
+    document.getElementById("game").classList.add("hidden");document.getElementById("correct").classList.remove("hidden");correctScreenShownAt = Date.now();
     document.getElementById("correctAnswer").textContent=a.name+" ("+a.iata+")";document.getElementById("correctStreak").textContent=streak;
   }else{
     if(mode==="timed"){clearTimer();result.push("🟥");gameOver(a);return;}
@@ -526,8 +526,9 @@ https://www.runway-rush.com`;
     alert("Score copied to clipboard.");
   }
 }
-let canAdvanceWithEnter = false;
 
+
+});
 document.addEventListener("keydown", function(event) {
 
   if (event.key !== "Enter") return;
@@ -535,13 +536,13 @@ document.addEventListener("keydown", function(event) {
   const correctVisible =
     !document.getElementById("correct").classList.contains("hidden");
 
-  if (correctVisible) {
+  if (!correctVisible) return;
 
-    event.preventDefault();
+  if (Date.now() - correctScreenShownAt < 500) return;
 
-    document.getElementById("nextAirportBtn").click();
+  event.preventDefault();
 
-  }
+  document.getElementById("nextAirportBtn").click();
 
 });  
 function playAgain(){
