@@ -2,7 +2,12 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" });
 
   const { playerId, displayName, mode, score } = req.body || {};
-  const date = new Date().toISOString().slice(0, 10);
+  const date = new Intl.DateTimeFormat(
+  "en-CA",
+  {
+    timeZone: "America/Chicago"
+  }
+).format(new Date());
 
   if (!playerId || !displayName || !mode || typeof score !== "number") {
     return res.status(400).json({ error: "Missing required fields" });
