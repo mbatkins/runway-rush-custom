@@ -422,7 +422,24 @@ async function loadLeaderboards(){
 
     renderBoard("todayBoard", data.today || []);
     renderBoard("allTimeBoard", data.allTime || []);
+document.getElementById("todayStats").innerHTML = `
+<b>✈️ ${data.flightsToday} Pilots have flown today</b>
 
+<br><br>
+
+<b>Highest Score</b><br>
+🥇 ${data.todaysLeader} — ${data.highestScore}
+
+<br><br>
+
+<b>Average Score</b><br>
+${data.averageScore}
+
+<br><br>
+
+<b>Today's Leader</b><br>
+${data.todaysLeader}
+`;
     if(displayName){
       document.getElementById("playerStats").innerHTML =
         `Playing as: <b>${displayName}</b><br>`+
