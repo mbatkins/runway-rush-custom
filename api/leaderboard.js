@@ -96,10 +96,16 @@ const todaysLeader =
   res.status(200).json({
   today,
   allTime,
+
+  flightsToday,
+  highestScore,
+  averageScore,
+  todaysLeader,
+
   todayRank,
   allTimeRank,
   todayScore,
   allTimePoints,
   daysPlayed
 });
-  }
+}
