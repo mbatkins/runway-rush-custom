@@ -102,3 +102,4 @@ const todaysLeader =
   allTimePoints,
   daysPlayed
 });
+  }
