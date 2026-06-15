@@ -58,7 +58,25 @@ const date = chicagoDate();
 
   const today = await hydrate(todayRaw.result || []);
   const allTime = await hydrate(allTimeRaw.result || []);
+const flightsToday = today.length;
 
+const highestScore =
+  today.length > 0
+    ? today[0].score
+    : 0;
+
+const averageScore =
+  today.length > 0
+    ? (
+        today.reduce((sum, p) => sum + p.score, 0) /
+        today.length
+      ).toFixed(1)
+    : "0.0";
+
+const todaysLeader =
+  today.length > 0
+    ? today[0].name
+    : "--";
   let todayRank = null, allTimeRank = null, todayScore = null, allTimePoints = null, daysPlayed = 0;
 
   if (playerId) {
