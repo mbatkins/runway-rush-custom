@@ -167,6 +167,27 @@ const MODE_INFO={
   timed:{title:"Runway Rush ⏱️",label:"DUTY TIME LIMIT",seed:"TIMED",pool:"airports",share:"airports in Duty Time Limit"}
 };
 function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/international airport/g,"").replace(/airport/g,"").replace(/[^a-z0-9]/g,"").trim();}
+function makeCityHint(city){
+  const chars = String(city || "").split("");
+  const revealable = [];
+
+  for(let i = 1; i < chars.length - 1; i++){
+    if(/[a-zA-Z]/.test(chars[i])){
+      revealable.push(i);
+    }
+  }
+
+  if(!revealable.length){
+    return chars.map(c => /[a-zA-Z]/.test(c) ? "_" : c).join("");
+  }
+
+  const pick = revealable[Math.floor(Math.random() * revealable.length)];
+
+  return chars.map((c,i) => {
+    if(!/[a-zA-Z]/.test(c)) return c;
+    return i === pick ? c.toUpperCase() : "_";
+  }).join("");
+}
 function dateKey() {
   const parts = new Intl.DateTimeFormat("en-US", {
     timeZone: "America/Chicago",
@@ -336,7 +357,7 @@ function submitGuess(){
   }else{
     if(mode==="timed"){clearTimer();result.push("🟥");gameOver(a);return;}
     misses++;document.getElementById("attempts").textContent="MISS "+misses+"/3";
-    if(misses===1)revealClue("clue1","Clue 1",a.geo_clue);else if(misses===2)revealClue("clue2","Clue 2",a.ops_clue);else{result.push("🟥");gameOver(a);}
+    if(misses===1)revealClue("clue1","Clue 1",a.geo_clue);else if(misses===2)revealClue("clue2","City Hint",makeCityHint(a.city));else{result.push("🟥");gameOver(a);}
   }
 }
 function revealClue(id,label,text){const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").innerHTML =
