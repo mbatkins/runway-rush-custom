@@ -160,6 +160,7 @@ let airports=[], deck=[], current=0, streak=0, misses=0, result=[], dayNumber=0,
 let correctScreenShownAt = 0;
 let playerId = "";
 let displayName = "";
+const successSound = new Audio("success.mp3");  
 const MODE_INFO={
   mixed:{title:"Runway Rush ✈️",label:"PLAY NOW",seed:"MIXED",pool:"airports",share:"airports"},
   domestic:{title:"Runway Rush 🇺🇸",label:"DOMESTIC TRIPS",seed:"DOMESTIC",pool:"domestic airports",share:"domestic airports"},
@@ -352,6 +353,9 @@ function submitGuess(){
   const a=deck[current%deck.length];const guess=document.getElementById("guess").value;if(!norm(guess))return;
   if(isCorrectGuess(guess,a)){
     clearTimer();streak++;result.push(mode==="timed"?"✅":misses===0?"🟩":misses===1?"🟨":"🟧");
+    successSound.currentTime = 0;
+successSound.play();
+navigator.vibrate?.(20);
     document.getElementById("game").classList.add("hidden");document.getElementById("correct").classList.remove("hidden");correctScreenShownAt = Date.now();
     document.getElementById("correctAnswer").textContent=a.name+" ("+a.iata+")";document.getElementById("correctStreak").textContent=streak;
   }else{
