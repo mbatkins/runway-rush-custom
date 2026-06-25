@@ -19,7 +19,19 @@
 *{box-sizing:border-box}
 body{margin:0;min-height:100vh;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:radial-gradient(circle at top,#17355d 0%,#08182f 42%,#061224 100%);color:var(--text);display:flex;justify-content:center}
 .wrap{width:100%;max-width:600px;padding:22px}
-.logo{display:block;width:min(420px,90%);margin:22px auto 8px;filter:drop-shadow(0 10px 25px rgba(0,0,0,.25));border-radius:8px}
+.logo{
+display:block;
+width:min(420px,90%);
+margin:22px auto 8px;
+filter:drop-shadow(0 10px 25px rgba(0,0,0,.25));
+border-radius:8px;
+transition:all .25s ease;
+}
+
+.logo.playing{
+width:180px;
+margin:6px auto 2px;
+}
 .brand{letter-spacing:.18em;font-size:13px;color:var(--muted);font-weight:800;margin-top:8px;text-align:center}
 h2{font-size:34px;margin:10px 0}
 h3{font-size:22px;line-height:1.25;font-weight:650;margin:0;color:#eef6ff;text-align:center}
@@ -302,6 +314,7 @@ function goHome(){
   document.getElementById("over").classList.add("hidden");
   document.getElementById("how").style.display="none";
   document.getElementById("home").classList.remove("hidden");
+  document.querySelector(".logo").classList.remove("playing");
 } 
 function poolForMode(m){if(m==="domestic")return airports.filter(a=>a.track==="domestic");if(m==="international")return airports.filter(a=>a.track==="international");return airports;}
 function startGame(selectedMode="mixed"){
@@ -375,6 +388,7 @@ if (mode === "mixed" || mode === "domestic") {
   ["home","correct","over"].forEach(id=>document.getElementById(id).classList.add("hidden"));
   document.getElementById("appWrap").classList.remove("wide");
   document.getElementById("game").classList.remove("hidden");
+  document.querySelector(".logo").classList.add("playing");
   loadAirport();
 }
 function loadAirport(){
@@ -669,6 +683,7 @@ function playAgain(){
   document.getElementById("game").classList.add("hidden");
   document.getElementById("correct").classList.add("hidden");
   document.getElementById("home").classList.remove("hidden");
+  document.querySelector(".logo").classList.remove("playing");
 }
 </script>
 </body>
