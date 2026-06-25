@@ -422,7 +422,9 @@ function revealClue(id,label,text){
   // Force browser to notice display change
   void c.offsetWidth;
 
+  requestAnimationFrame(() => {
   c.classList.add("show");
+});
 
   // Tiny wiggle on airport image
   const image = document.getElementById("sil");
