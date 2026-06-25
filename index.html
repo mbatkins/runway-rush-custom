@@ -380,11 +380,12 @@ if (mode === "mixed" || mode === "domestic") {
 function loadAirport(){
   clearTimer();const a=deck[current%deck.length];misses=0;
   document.getElementById("sil").src=a.image;document.getElementById("guess").value="";
-  ["clue1","clue2"].forEach(id=>{
+["clue1","clue2"].forEach(id=>{
   const clue = document.getElementById(id);
-  clue.style.display = "none";
+
   clue.classList.remove("show");
-  clue.innerHTML = "";
+  clue.style.visibility = "hidden";
+  clue.innerHTML = "&nbsp;";
 });
   document.getElementById("msg").textContent="";document.getElementById("attempts").textContent=mode==="timed"?"NO CLUES":"MISS 0/3";document.getElementById("streak").textContent=streak;
   document.getElementById("modeLabel").textContent=MODE_INFO[mode].label;
