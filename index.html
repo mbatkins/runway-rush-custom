@@ -305,7 +305,22 @@ async function init(){
   dayNumber=dayIndex();
 }
 init();
-function showHow(){const h=document.getElementById("how");h.style.display=h.style.display==="block"?"none":"block";}
+function showHow(){
+
+  const h = document.getElementById("how");
+
+  if(h.classList.contains("show")){
+    h.classList.remove("show");
+    h.style.visibility = "hidden";
+  }else{
+    h.style.display = "block";
+    h.style.visibility = "visible";
+
+    requestAnimationFrame(()=>{
+      h.classList.add("show");
+    });
+  }
+}
 function goHome(){
   clearTimer();
   document.getElementById("game").classList.add("hidden");
