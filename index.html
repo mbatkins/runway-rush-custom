@@ -37,7 +37,38 @@ input{width:100%;margin-top:16px;padding:16px;border-radius:16px;border:1px soli
 button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;font-weight:900;font-size:16px;cursor:pointer}
 .primary{background:white;color:#08182f}
 .secondary{background:#18365f;color:white;border:1px solid rgba(255,255,255,.1)}
-.clue{display:none;margin-top:14px;background:#18365f;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:14px;text-align:left;color:#eef6ff}.clue b{color:white}
+.clue{
+  display:none;
+  margin-top:14px;
+  background:#18365f;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  padding:14px;
+  text-align:left;
+  color:#eef6ff;
+  opacity:0;
+  transform:translateY(8px);
+  transition:opacity .25s ease, transform .25s ease;
+}
+
+.clue.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.clue b{color:white}
+
+.wiggle{
+  animation:wiggle .28s ease;
+}
+
+@keyframes wiggle{
+  0%{transform:translateX(0)}
+  25%{transform:translateX(-4px)}
+  50%{transform:translateX(4px)}
+  75%{transform:translateX(-3px)}
+  100%{transform:translateX(0)}
+}
 .msg{
   min-height:24px;
   margin-top:12px;
@@ -92,14 +123,15 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
     <div class="panel">
       <div id="timerLine" class="status hidden"><span>DUTY TIME REMAINING</span><span id="timer" class="timer">10</span></div>
       <div class="silbox"><img id="sil" alt="Airport image"/></div>
+<div id="clue1" class="clue"></div>
+
+<div id="clue2" class="clue"></div>
+
 <input id="guess" autocomplete="off" placeholder="Enter airport name or code" onkeydown="if(event.key==='Enter')submitGuess()"/>
+
 <button class="primary" onclick="submitGuess()">SUBMIT GUESS</button>
 
 <div id="msg" class="msg"></div>
-
-<div id="clue1" class="clue"></div>
-<div id="clue2" class="clue"></div>
-    </div>
   </section>
 
   <section id="correct" class="panel hidden">
@@ -339,7 +371,12 @@ if (mode === "mixed" || mode === "domestic") {
 function loadAirport(){
   clearTimer();const a=deck[current%deck.length];misses=0;
   document.getElementById("sil").src=a.image;document.getElementById("guess").value="";
-  ["clue1","clue2"].forEach(id=>{document.getElementById(id).style.display="none";document.getElementById(id).innerHTML="";});
+  ["clue1","clue2"].forEach(id=>{
+  const clue = document.getElementById(id);
+  clue.style.display = "none";
+  clue.classList.remove("show");
+  clue.innerHTML = "";
+});
   document.getElementById("msg").textContent="";document.getElementById("attempts").textContent=mode==="timed"?"NO CLUES":"MISS 0/3";document.getElementById("streak").textContent=streak;
   document.getElementById("modeLabel").textContent=MODE_INFO[mode].label;
   document.getElementById("timerLine").classList.toggle("hidden",mode!=="timed");
@@ -364,8 +401,30 @@ navigator.vibrate?.(20);
     if(misses===1)revealClue("clue1","Clue 1",a.geo_clue);else if(misses===2)revealClue("clue2","City Hint",makeCityHint(a.city));else{result.push("🟥");gameOver(a);}
   }
 }
-function revealClue(id,label,text){const c=document.getElementById(id);c.style.display="block";c.innerHTML="<b>"+label+":</b> "+text;document.getElementById("msg").innerHTML =
-  "❌ <b>Incorrect</b> &nbsp;&nbsp; 💡 Clue Revealed Below";document.getElementById("msg").className="msg bad";}
+function revealClue(id,label,text){
+
+  const c = document.getElementById(id);
+
+  c.innerHTML = "<b>"+label+":</b> "+text;
+
+  c.style.display = "block";
+
+  // Force browser to notice display change
+  void c.offsetWidth;
+
+  c.classList.add("show");
+
+  // Tiny wiggle on airport image
+  const image = document.getElementById("sil");
+  image.classList.remove("wiggle");
+  void image.offsetWidth;
+  image.classList.add("wiggle");
+
+  document.getElementById("msg").innerHTML =
+    "❌ <b>Incorrect.</b> A new hint has been revealed.";
+
+  document.getElementById("msg").className = "msg bad";
+}
 function saveLeaderboardName(){
 
   const name =
