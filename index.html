@@ -38,17 +38,26 @@ button{width:100%;margin-top:12px;padding:15px 16px;border:0;border-radius:16px;
 .primary{background:white;color:#08182f}
 .secondary{background:#18365f;color:white;border:1px solid rgba(255,255,255,.1)}
 .clue{
-  display:none;
-  margin-top:14px;
+  visibility:hidden;
+  min-height:54px;
+  margin-top:10px;
   background:#18365f;
   border:1px solid rgba(255,255,255,.1);
-  border-radius:16px;
-  padding:14px;
+  border-radius:14px;
+  padding:12px 14px;
   text-align:left;
   color:#eef6ff;
   opacity:0;
-  transform:translateY(8px);
-  transition:opacity .25s ease, transform .25s ease;
+  transform:translateY(6px);
+  transition:opacity .25s ease, transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+
+.clue.show{
+  visibility:visible;
+  opacity:1;
+  transform:translateY(0);
+  border-color:rgba(253,230,138,.65);
+  box-shadow:0 0 0 1px rgba(253,230,138,.18);
 }
 
 .clue.show{
